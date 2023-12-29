@@ -7,3 +7,6 @@ sidebar_position: 3
 mapper.events
 ```
 System event table.
+
+
+## Type

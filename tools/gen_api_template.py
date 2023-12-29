@@ -309,19 +309,22 @@ def gen_group(group:dict, pos:int, base:Path, suffix:str, prefix):
                             f.write(data)
                             if len(item) >= 3:
                                 param_table = False
-                                f.write('\n\n## Prameters\n|Parameter|Description|\n|-|-|\n')
+                                f.write('\n\n## Prameters\n|Parameter|Type|Description|\n|-|-|-|\n')
                                 for arg in list_args(item[2:]):
+                                    argtype = ''
                                     argdesc = ''
                                     if arg == 'param_table':
+                                        argtype = 'table'
                                         argdesc = 'This parameter is in table format, meaning it\'s specified by keys rather than parameter positions. '\
                                                   'See the [Parameters Table](#parameters-table) section.'
                                         param_table = True
-                                    f.write(f'|{arg}|{argdesc}|\n')
+                                    f.write(f'|{arg}|{argtype}|{argdesc}|\n')
                                 if param_table:
-                                    f.write('\n\n## Parameters Table\n|Key|Description|\n|-|-|\n| | |\n')
+                                    f.write('\n\n## Parameters Table\n|Key|Type|Description|\n|-|-|-|\n| | | |\n')
                             if title[0] in ('functions', 'methods', 'callbacks'):
                                 f.write('\n\n## Return Values\n')
-                                
+                            if title[0] in ('variables', 'properties'):
+                                f.write('\n\n## Type\n')
 
 # start from each library
 base = Path('.')

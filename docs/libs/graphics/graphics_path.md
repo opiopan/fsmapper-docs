@@ -10,9 +10,9 @@ Create a geometry object defined as a path.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|figure_def||
+|Parameter|Type|Description|
+|-|-|-|
+|figure_def|||
 
 
 ## Return Values

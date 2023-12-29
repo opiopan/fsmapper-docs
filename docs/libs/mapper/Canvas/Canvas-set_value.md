@@ -10,9 +10,9 @@ Return the value associated with the canvas.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|value||
+|Parameter|Type|Description|
+|-|-|-|
+|value|||
 
 
 ## Return Values

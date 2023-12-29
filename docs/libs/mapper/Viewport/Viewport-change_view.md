@@ -10,9 +10,9 @@ Change the current view.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|view_id||
+|Parameter|Type|Description|
+|-|-|-|
+|view_id|||
 
 
 ## Return Values

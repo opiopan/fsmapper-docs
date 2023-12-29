@@ -10,9 +10,9 @@ Execute an RPN script within MSFS.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|rpn||
+|Parameter|Type|Description|
+|-|-|-|
+|rpn|||
 
 
 ## Return Values

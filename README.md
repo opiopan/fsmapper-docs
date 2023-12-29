@@ -1,6 +1,6 @@
 # fsmapper-docs
 
-This repository contains the source for the upcoming [fsmapper](https://github.com/opiopan/fsmapper) documentation to be published on GitHub Pages.
+This repository contains the source for the [fsmapper](https://github.com/opiopan/fsmapper) documentation to be published on the [GitHub Pages](https://opiopan.github.io/fsmapper-docs/).
 I haven't deployed it to GitHub Pages yet because the manuscript is still in progress.
 I plan to deploy it once we've written a significant portion of it.
 

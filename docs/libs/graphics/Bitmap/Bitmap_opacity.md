@@ -7,3 +7,6 @@ sidebar_position: 3
 Bitmap.opacity
 ```
 Opacity of the bitmap.
+
+
+## Type

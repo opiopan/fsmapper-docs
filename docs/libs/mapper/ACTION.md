@@ -10,10 +10,10 @@ Imprementation of an action by user.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|event_id||
-|value||
+|Parameter|Type|Description|
+|-|-|-|
+|event_id|||
+|value|||
 
 
 ## Return Values

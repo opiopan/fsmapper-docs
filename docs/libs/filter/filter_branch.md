@@ -10,10 +10,10 @@ Create a native-action to implement conditional branching between multiple actio
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|cond-exp||
-|...||
+|Parameter|Type|Description|
+|-|-|-|
+|cond-exp|||
+|...|||
 
 
 ## Return Values

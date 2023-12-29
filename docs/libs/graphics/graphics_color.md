@@ -11,14 +11,14 @@ Create a solid color brush object.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|color_name||
-|alpha||
-|r||
-|g||
-|b||
-|alpha||
+|Parameter|Type|Description|
+|-|-|-|
+|color_name|||
+|alpha|||
+|r|||
+|g|||
+|b|||
+|alpha|||
 
 
 ## Return Values

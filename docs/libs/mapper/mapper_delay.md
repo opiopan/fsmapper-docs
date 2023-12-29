@@ -10,10 +10,10 @@ Deferred function execution.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|rel_time||
-|func||
+|Parameter|Type|Description|
+|-|-|-|
+|rel_time|||
+|func|||
 
 
 ## Return Values

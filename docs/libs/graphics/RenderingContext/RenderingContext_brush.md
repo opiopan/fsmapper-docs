@@ -7,3 +7,6 @@ sidebar_position: 1
 RenderingContext.brush
 ```
 Current brush.
+
+
+## Type

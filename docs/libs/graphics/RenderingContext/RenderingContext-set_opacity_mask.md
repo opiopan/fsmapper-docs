@@ -10,9 +10,9 @@ Set a bitmap used as opacity mask to the context.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|bitmap||
+|Parameter|Type|Description|
+|-|-|-|
+|bitmap|||
 
 
 ## Return Values

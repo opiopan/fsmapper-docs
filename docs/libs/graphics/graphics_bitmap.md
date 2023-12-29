@@ -11,11 +11,11 @@ Create a bitmap object.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|path||
-|width||
-|height||
+|Parameter|Type|Description|
+|-|-|-|
+|path|||
+|width|||
+|height|||
 
 
 ## Return Values

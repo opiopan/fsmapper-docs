@@ -10,10 +10,10 @@ Create a native-action to modify the characteristics curve of a device's analog 
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|action||
-|val_mappings||
+|Parameter|Type|Description|
+|-|-|-|
+|action|||
+|val_mappings|||
 
 
 ## Return Values

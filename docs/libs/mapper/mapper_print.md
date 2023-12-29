@@ -10,9 +10,9 @@ Print a message.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|message||
+|Parameter|Type|Description|
+|-|-|-|
+|message|||
 
 
 ## Return Values

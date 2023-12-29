@@ -10,9 +10,9 @@ Create a rendering context associated with a bitmap.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|bitmap||
+|Parameter|Type|Description|
+|-|-|-|
+|bitmap|||
 
 
 ## Return Values

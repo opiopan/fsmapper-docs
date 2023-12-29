@@ -7,3 +7,6 @@ sidebar_position: 1
 Bitmap.width
 ```
 Width of the bitmap.
+
+
+## Type

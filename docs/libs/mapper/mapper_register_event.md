@@ -10,9 +10,9 @@ Register an event.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|name||
+|Parameter|Type|Description|
+|-|-|-|
+|name|||
 
 
 ## Return Values

@@ -7,3 +7,6 @@ sidebar_position: 2
 Bitmap.height
 ```
 Height of the bitmap.
+
+
+## Type

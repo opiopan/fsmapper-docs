@@ -10,9 +10,9 @@ Unregister an event.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|event_id||
+|Parameter|Type|Description|
+|-|-|-|
+|event_id|||
 
 
 ## Return Values

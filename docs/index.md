@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Introduction
 
-fsmapper is a Windows application designed to connect a variety of input and output devices to flight simulators.
+**fsmapper** is a Windows application designed to connect a variety of input and output devices to flight simulators.
 Originally, the development of fsmapper began to connect my DIY controller device, [**SimHID G1000**](https://github.com/opiopan/simhid-g1000), to FS2020. However, it has now evolved to encompass functionalities that allow the creation of a home cockpit using a wide range of devices.<br/>
 fsmapper targets not only home cockpit builders aiming for an exact replica of a specific aircraft's cockpit,
 but also general flight simulator players who have limited equipment and space but want to efficiently operate a wide range of aircraft.
@@ -50,7 +50,7 @@ it enables diverse information representation and manipulation even on a small s
 All the functionalities mentioned earlier are accessed through [Lua 5.4](https://www.lua.org/manual/5.4/) scripts.
 Although fsmapper is implemented as a Windows GUI application, 
 it actually only features a dashboard to display operational status and a console function to show messages during script execution,　particularly error messages.
-If there wasn't a necessity to allow users to select FS2020's popup windows,　I believe it would have been implemented as a command-line interface (CLI).
+If there wasn't a necessity to allow users to select FS2020's pop-out windows,　I believe it would have been implemented as a command-line interface (CLI).
 
 :::info
 
@@ -58,7 +58,7 @@ Initially, in FS2020, when multiple instruments were popped out, they would defa
 Even when manipulated to display in separate windows, each window had same identical attributes such as window titles, making it impossible for the program to mechanically discern which window corresponded to which instrument.<br/>
 On the other hand, fsmapper dynamically controls the visibility, size, position, and other aspects of these windows to treat them as components of a virtual instrument panel. When multiple instruments, such as the G1000's PFD and MFD, are popped out, fsmapper needs to identify which window corresponds to each instrument. Therefore, an interface was created where users can click on each window to select and match them with the respective PFD or MFD.
 
-In 2023, FS2020 was improved to pop up individual windows with a unique window title with each ```[Right Ctrl] + [Mouse Click]```. In response to this update, a feature was added to fsmapper to automatically capture these windows without requiring users to explicitly select them.
+In 2023, FS2020 was improved to pop out individual windows with a unique window title with each ```[Right Ctrl] + [Mouse Click]```. In response to this update, a feature was added to fsmapper to automatically capture these windows without requiring users to explicitly select them.
 
 :::
 

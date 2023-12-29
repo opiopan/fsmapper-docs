@@ -10,12 +10,12 @@ Fill a rectangle.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|x||
-|y||
-|width||
-|height||
+|Parameter|Type|Description|
+|-|-|-|
+|x|||
+|y|||
+|width|||
+|height|||
 
 
 ## Return Values

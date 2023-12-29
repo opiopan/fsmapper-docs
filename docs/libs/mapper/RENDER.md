@@ -10,10 +10,10 @@ Imprementation of a renderer for a Canvas view element by user.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|context||
-|value||
+|Parameter|Type|Description|
+|-|-|-|
+|context|||
+|value|||
 
 
 ## Return Values

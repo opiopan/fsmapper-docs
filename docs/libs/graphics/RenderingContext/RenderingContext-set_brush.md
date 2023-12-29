@@ -10,9 +10,9 @@ Set a brush to the context.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|brush||
+|Parameter|Type|Description|
+|-|-|-|
+|brush|||
 
 
 ## Return Values

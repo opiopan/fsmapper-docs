@@ -10,9 +10,9 @@ Return a vJoyUnit object corresponding to a POV.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|pov_id||
+|Parameter|Type|Description|
+|-|-|-|
+|pov_id|||
 
 
 ## Return Values

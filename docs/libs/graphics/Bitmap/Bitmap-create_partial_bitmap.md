@@ -10,12 +10,12 @@ create a bitmap corresponding to a partial area of the original bitmap.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|x||
-|y||
-|width||
-|height||
+|Parameter|Type|Description|
+|-|-|-|
+|x|||
+|y|||
+|width|||
+|height|||
 
 
 ## Return Values

@@ -7,3 +7,6 @@ sidebar_position: 1
 mapper.script_path
 ```
 Path of the configuration script.
+
+
+## Type

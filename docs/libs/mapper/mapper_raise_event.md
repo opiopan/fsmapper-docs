@@ -10,10 +10,10 @@ Raise an event.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|event_id||
-|value||
+|Parameter|Type|Description|
+|-|-|-|
+|event_id|||
+|value|||
 
 
 ## Return Values

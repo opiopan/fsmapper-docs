@@ -10,9 +10,9 @@ Set Event-Action mapping definitions for the viewport.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|mapping_defs||
+|Parameter|Type|Description|
+|-|-|-|
+|mapping_defs|||
 
 
 ## Return Values

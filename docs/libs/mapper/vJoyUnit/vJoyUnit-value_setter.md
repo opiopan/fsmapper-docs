@@ -10,9 +10,9 @@ Create a  native-actionn to set a valuev for the operable unit.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|value||
+|Parameter|Type|Description|
+|-|-|-|
+|value|||
 
 
 ## Return Values

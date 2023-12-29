@@ -10,9 +10,9 @@ Add secondary Event-Action mapping definitions.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|mapping_defs||
+|Parameter|Type|Description|
+|-|-|-|
+|mapping_defs|||
 
 
 ## Return Values

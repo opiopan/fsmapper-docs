@@ -10,10 +10,10 @@ Create a native-action that replicates an event for multiple subsequent actions.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|action||
-|...||
+|Parameter|Type|Description|
+|-|-|-|
+|action|||
+|...|||
 
 
 ## Return Values

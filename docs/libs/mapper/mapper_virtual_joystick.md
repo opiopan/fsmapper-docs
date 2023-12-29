@@ -10,9 +10,9 @@ Create vJoy feeder object.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|devid||
+|Parameter|Type|Description|
+|-|-|-|
+|devid|||
 
 
 ## Return Values

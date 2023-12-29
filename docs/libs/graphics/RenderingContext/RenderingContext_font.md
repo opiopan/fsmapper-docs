@@ -7,3 +7,6 @@ sidebar_position: 2
 RenderingContext.font
 ```
 Current font.
+
+
+## Type

@@ -10,9 +10,9 @@ Return a vJoyUnit object corresponding to a button.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|button_id||
+|Parameter|Type|Description|
+|-|-|-|
+|button_id|||
 
 
 ## Return Values

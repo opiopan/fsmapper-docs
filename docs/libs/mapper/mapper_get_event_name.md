@@ -10,9 +10,9 @@ Get the name assinged to an event.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|evet_id||
+|Parameter|Type|Description|
+|-|-|-|
+|evet_id|||
 
 
 ## Return Values

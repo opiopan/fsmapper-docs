@@ -10,9 +10,9 @@ Set a font to the context.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|font||
+|Parameter|Type|Description|
+|-|-|-|
+|font|||
 
 
 ## Return Values

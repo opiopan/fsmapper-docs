@@ -10,9 +10,9 @@ Set a value for the operable unit.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|value||
+|Parameter|Type|Description|
+|-|-|-|
+|value|||
 
 
 ## Return Values

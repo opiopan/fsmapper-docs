@@ -10,9 +10,9 @@ Register MSFS internal data for observing.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|def_array||
+|Parameter|Type|Description|
+|-|-|-|
+|def_array|||
 
 
 ## Return Values

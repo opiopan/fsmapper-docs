@@ -10,9 +10,9 @@ Create a native-action to execute an RPN script within MSFS.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|rpn||
+|Parameter|Type|Description|
+|-|-|-|
+|rpn|||
 
 
 ## Return Values

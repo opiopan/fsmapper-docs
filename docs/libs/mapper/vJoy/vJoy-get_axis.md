@@ -10,9 +10,9 @@ Return a vJoyUnit object corresponding to an analog axis.
 
 
 ## Prameters
-|Parameter|Description|
-|-|-|
-|axis||
+|Parameter|Type|Description|
+|-|-|-|
+|axis|||
 
 
 ## Return Values
