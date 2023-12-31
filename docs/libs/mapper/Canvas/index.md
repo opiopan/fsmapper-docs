@@ -17,4 +17,3 @@ Object Representing a drawable area on a view.
 |[```Canvas:set_value()```](/libs/mapper/Canvas/Canvas-set_value)|Return the value associated with the canvas|
 |[```Canvas:get_value()```](/libs/mapper/Canvas/Canvas-get_value)|Set a value for the canvas|
 |[```Canvas:value_setter()```](/libs/mapper/Canvas/Canvas-value_setter)|Create a native-action to set a value for the canvas|
-|[```[```](/libs/mapper/Canvas/[)|v|

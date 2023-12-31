@@ -7,7 +7,8 @@ sidebar_position: 1
 **fsmapper** is a Windows application designed to connect a variety of input and output devices to flight simulators.
 Originally, the development of fsmapper began to connect my DIY controller device, [**SimHID G1000**](https://github.com/opiopan/simhid-g1000), to FS2020. However, it has now evolved to encompass functionalities that allow the creation of a home cockpit using a wide range of devices.<br/>
 fsmapper targets not only home cockpit builders aiming for an exact replica of a specific aircraft's cockpit,
-but also general flight simulator players who have limited equipment and space but want to efficiently operate a wide range of aircraft.
+but also general flight simulator players who have limited equipment and space but want to efficiently operate a wide range of aircraft
+(The truth is, I fall into the latter category as well).
 
 ## What fsmapper enables
 

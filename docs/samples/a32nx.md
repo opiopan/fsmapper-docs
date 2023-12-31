@@ -5,17 +5,17 @@ sidebar_position: 3
 # a32nx.lua
 
 ## Location
-[```scripts/practical/a32nx.lua```](https://github.com/opiopan/fsmapper/blob/main/samples/practical/a32nx.lua)
+[```samples/practical/a32nx.lua```](https://github.com/opiopan/fsmapper/blob/main/samples/practical/a32nx.lua)
 
 ## Description
-<img alt="a32nx.lua" src="https://raw.githubusercontent.com/wiki/opiopan/fsmapper/images/a32nx.jpg" width="400" align="right"/>
+<img alt="a32nx.lua" src={require('./images/a32nx.jpg').default} width="400" align="right"/>
 
 This script was written for [FlyByWire A32NX](https://flybywiresim.com).<br/>
 This is more complex than the above two scripts. This script provides the integrated virtual cockpit which contains physical operable units such as buttons and knobs, touch controllable units on the monitor, and poped out window contents such as PFD.<br/>
 This script includes several [sub-module scripts](https://github.com/opiopan/fsmapper/tree/main/samples/practical/a32nx), and it also uses [several bitmap images](https://github.com/opiopan/fsmapper/tree/main/samples/practical/assets) to render each operable units.
 
 
-In this scrit, you can see the following example usage of fsmapper in addition to [```g1000_x56.lua```](samples/g1000_x56) case.
+In this scrit, you can see the following example usage of fsmapper in addition to [```g1000_x56.lua```](g1000_x56) case.
 - Observing the aircraft status represented by [RPN script](https://docs.flightsimulator.com/html/Additional_Information/Reverse_Polish_Notation.htm)
 - Drawing graphics on the screen
 - Handling the touch events and mouse events occured on the screen
@@ -34,7 +34,7 @@ The width of every view is a half width of the SimHID monitor width. So two view
 By pressing soft-keys placed at bottom of SimHID G1000, two views to show can be specified.<br/>
 And the switches placed on the left end and the right end of SimHID G1000 housing can also control views to show.
 
-![a32nx scripting](/img/a32nx_script_desc.svg)
+![a32nx scripting](images/a32nx_script_desc.svg)
 
 The pushbuttons rendered on each view can be operated by tapping them. The toggle switches include engine master switches and the selector knobs can be operated by flicking them.
 The correspondence between SimHID G1000 operations and A32NX operations are shown below.

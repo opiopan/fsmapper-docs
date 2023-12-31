@@ -3,5 +3,6 @@
   "position": 2,
   "link": {
     "type": "generated-index",
+    "description": "This chapter explains the installation process of fsmapper and provides a simple tutorial on configuring fsmapper's behavior."
   }
 }

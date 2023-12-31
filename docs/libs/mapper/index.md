@@ -41,6 +41,7 @@ fsmapper basic library.
 ## Objects
 |Name|Description|
 |-|-|
+|[```Device```](/libs/mapper/Device)|Object representing a device|
 |[```Viewport```](/libs/mapper/Viewport)|Object representing a viewport|
 |[```OperableArea```](/libs/mapper/OperableArea)|Object Representing a operable area on a view|
 |[```Canvas```](/libs/mapper/Canvas)|Object Representing a drawable area on a view|
