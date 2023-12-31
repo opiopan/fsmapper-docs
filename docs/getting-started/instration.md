@@ -40,7 +40,7 @@ fsmapper can be launched from any folder it's placed in.
 ## Additional Softwares
 While not mandatory for running fsmapper, it's highly recommended to additionally install the following two pieces of software. 
 fsmapper provides users with more convenient features by integrating with these softwares.
-Throughout this documentation, starting from the [Tutrial](tutrial), numerous script examples assume that these softwares are installed.
+Throughout this documentation, starting from the [Tutorial](tutorial), numerous script examples assume that these softwares are installed.
 
 - **vJoy ([Dwonload](https://sourceforge.net/projects/vjoystick))**<br/>
     vJoy is a device driver that functions as a virtual joystick. 

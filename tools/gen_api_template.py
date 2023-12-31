@@ -37,6 +37,20 @@ libs = [
         ],
         'objects': [
             {
+                'name': 'Device',
+                'description': 'Object representing a device',
+                'properties': [
+                    ('Device.events', 'A table holding event IDs for each input unit'),
+                    ('Device.upstream_ids', 'A table holding unit IDs for each output unit'),
+                ],
+                'methods': [
+                    ('Device.get_events()', 'Return a table holding event IDs for each input unit'),
+                    ('Device.get_upstream_ids()', 'Return a table holding unit IDs for each output unit'),
+                    ('Device.close()', 'Close the device'),
+                    ('Device.send()', 'Send a value to output unit', 'unit_id, value'),
+                ],
+            },
+            {
                 'name': 'Viewport',
                 'description': 'Object representing a viewport',
                 'properties': [
@@ -63,7 +77,7 @@ libs = [
                 'methods': [
                     ('Canvas:set_value()', 'Return the value associated with the canvas', 'value'),
                     ('Canvas:get_value()', 'Set a value for the canvas'),
-                    ('Canvas:value_setter()', 'Create a native-action to set a value for the canvas'), '[value]',
+                    ('Canvas:value_setter()', 'Create a native-action to set a value for the canvas', '[value]'),
                 ],
             },
             {
