@@ -48,6 +48,7 @@ libs = [
                     ('Device.get_upstream_ids()', 'Return a table holding unit IDs for each output unit'),
                     ('Device.close()', 'Close the device'),
                     ('Device.send()', 'Send a value to output unit', 'unit_id, value'),
+                    ('Device.sender()', 'Create a native-action to send a value to output unit', 'unit_id[, value]'),
                 ],
             },
             {
@@ -61,7 +62,7 @@ libs = [
                     ('Viewport:register_view()', 'Register a view to the viewport', 'param_table'),
                     ('Viewport:change_view()', 'Change the current view', 'view_id'),
                     ('Viewport:set_mappings()', 'Set Event-Action mapping definitions for the viewport', 'mapping_defs'),
-                    ('Viewport:set_mappings()', 'Add Event-Action mapping definitions for the viewport', 'mapping_defs'),
+                    ('Viewport:add_mappings()', 'Add Event-Action mapping definitions for the viewport', 'mapping_defs'),
                 ],
             },
             {
@@ -134,7 +135,7 @@ libs = [
         'description': 'Interactivity features with Microsoft Flight Simulator',
         'functions': [
             ('fs2020.send_event()', 'Send a SimConnect client event', 'event_name[, param1[, param2[, param3[, param4[, param5]]]]'),
-            ('fs2020.event_sender()', 'Create a native-action to send a SimConnect client event''event_name[, param1[, param2[, param3[, param4[, param5]]]]'),
+            ('fs2020.event_sender()', 'Create a native-action to send a SimConnect client event','event_name[, param1[, param2[, param3[, param4[, param5]]]]'),
             ('fs2020.add_observed_simvars()', 'Register SimVars for observing', 'param_table'),
             ('fs2020.clear_observed_simvars()', 'Clear all observed SimVars'),
             ('fs2020.mfwasm.execute_rpn()', 'Execute an RPN script within MSFS', 'rpn'),
@@ -329,7 +330,7 @@ def gen_group(group:dict, pos:int, base:Path, suffix:str, prefix):
                                     argdesc = ''
                                     if arg == 'param_table':
                                         argtype = 'table'
-                                        argdesc = 'This parameter is in table format, meaning it\'s specified by keys rather than parameter positions. '\
+                                        argdesc = 'This parameter is in associative array table format, meaning it\'s specified by keys rather than parameter positions. '\
                                                   'See the [Parameters Table](#parameters-table) section.'
                                         param_table = True
                                     f.write(f'|{arg}|{argtype}|{argdesc}|\n')

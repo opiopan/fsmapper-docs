@@ -18,4 +18,4 @@ Object representing a viewport.
 |[```Viewport:register_view()```](/libs/mapper/Viewport/Viewport-register_view)|Register a view to the viewport|
 |[```Viewport:change_view()```](/libs/mapper/Viewport/Viewport-change_view)|Change the current view|
 |[```Viewport:set_mappings()```](/libs/mapper/Viewport/Viewport-set_mappings)|Set Event-Action mapping definitions for the viewport|
-|[```Viewport:set_mappings()```](/libs/mapper/Viewport/Viewport-set_mappings)|Add Event-Action mapping definitions for the viewport|
+|[```Viewport:add_mappings()```](/libs/mapper/Viewport/Viewport-add_mappings)|Add Event-Action mapping definitions for the viewport|

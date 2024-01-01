@@ -19,3 +19,4 @@ Object representing a device.
 |[```Device.get_upstream_ids()```](/libs/mapper/Device/Device_get_upstream_ids)|Return a table holding unit IDs for each output unit|
 |[```Device.close()```](/libs/mapper/Device/Device_close)|Close the device|
 |[```Device.send()```](/libs/mapper/Device/Device_send)|Send a value to output unit|
+|[```Device.sender()```](/libs/mapper/Device/Device_sender)|Create a native-action to send a value to output unit|

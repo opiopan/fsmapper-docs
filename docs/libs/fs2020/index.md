@@ -10,7 +10,7 @@ Interactivity features with Microsoft Flight Simulator.
 |Name|Description|
 |-|-|
 |[```fs2020.send_event()```](/libs/fs2020/fs2020_send_event)|Send a SimConnect client event|
-|[```fs2020.event_sender()```](/libs/fs2020/fs2020_event_sender)|Create a native-action to send a SimConnect client eventevent_name[, param1[, param2[, param3[, param4[, param5]]]]|
+|[```fs2020.event_sender()```](/libs/fs2020/fs2020_event_sender)|Create a native-action to send a SimConnect client event|
 |[```fs2020.add_observed_simvars()```](/libs/fs2020/fs2020_add_observed_simvars)|Register SimVars for observing|
 |[```fs2020.clear_observed_simvars()```](/libs/fs2020/fs2020_clear_observed_simvars)|Clear all observed SimVars|
 |[```fs2020.mfwasm.execute_rpn()```](/libs/fs2020/fs2020_mfwasm_execute_rpn)|Execute an RPN script within MSFS|
