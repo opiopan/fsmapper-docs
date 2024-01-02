@@ -2,9 +2,9 @@
 sidebar_position: 7
 ---
 
-# Device.sender()
+# Device:sender()
 ```lua
-Device.sender(unit_id[, value])
+Device:sender(unit_id[, value])
 ```
 Create a native-action to send a value to output unit.
 

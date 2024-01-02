@@ -2,9 +2,9 @@
 sidebar_position: 6
 ---
 
-# Device.send()
+# Device:send()
 ```lua
-Device.send(unit_id, value)
+Device:send(unit_id, value)
 ```
 Send a value to output unit.
 

@@ -48,7 +48,7 @@ local action_native = axis:value_setter()
 ```
 
 Below is a list of functions or methods that provide native-action
-- [`Device:sender()`](/libs/mapper/Device/Device_sender)
+- [`Device:sender()`](/libs/mapper/Device/Device-sender)
 - [`Canvas:value_setter()`](/libs/mapper/Canvas/Canvas-value_setter)
 - [`vJoyUnit:value_setter()`](/libs/mapper/vJoyUnit/vJoyUnit-value_setter)
 - [`Keystroke:synthesize()`](/libs/mapper/Keystroke/Keystroke-synthesizer)
@@ -104,8 +104,8 @@ mapper.set_primary_mappings({})
 :::
 
 ## Filter
-The [`filter library`](http://localhost:3000/fsmapper-docs/libs/filter/) enables processing events, performing conditional branching, and similar operations through cascaded connections of native-actions.
-By combining the native-actions provided by the [`filter library`](http://localhost:3000/fsmapper-docs/libs/filter/) with other native-actions, complex operations can be efficiently executed as native code without the intervention of the Lua interpreter.
+The [**filter library**](http://localhost:3000/fsmapper-docs/libs/filter/) enables processing events, performing conditional branching, and similar operations through cascaded connections of native-actions.
+By combining the native-actions provided by the [**filter library**](http://localhost:3000/fsmapper-docs/libs/filter/) with other native-actions, complex operations can be efficiently executed as native code without the intervention of the Lua interpreter.
 
 Below is an example of mapping throttle input from a physical device to a vJoy device. 
 This setup is designed to accommodate softwares where the afterburner On/Off is assigned to key or button inputs rather than the throttle position. It maps the physical throttle's afterburner detent position to 100% on the vJoy throttle while also triggering button operations for the afterburner On/Off based on the physical throttle's position.
@@ -128,7 +128,6 @@ set_primary_mappings{
                 {condition="falled", value=-44000, action=v_ab:value_setter(true)},
                 {condition="exceeded", value=-39000, action=v_ab:value_setter(false)}
             }
-
         }
     }
 }

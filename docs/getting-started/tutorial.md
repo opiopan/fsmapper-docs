@@ -183,7 +183,7 @@ mapper.set_primary_mappings{
 This script may function with many of Asobo's default small aircraft, but it might not work with aircraft that have three-state light switches or third-party add-on aircraft.
 :::
 
-The added initial line retrieves a table containing event IDs according to each device unit's events using the [```get_events()```](/libs/mapper/Device/Device_get_events) method of the [```Device```](/libs/mapper/Device) object.
+The added initial line retrieves a table containing event IDs according to each device unit's events using the [```get_events()```](/libs/mapper/Device/Device-get_events) method of the [```Device```](/libs/mapper/Device) object.
 
 In the two Event-Action mappings, cockpit devices are manipulated by executing [**RPN script**](https://docs.flightsimulator.com/html/Additional_Information/Reverse_Polish_Notation.htm). In MSFS, [**RPN script**](https://docs.flightsimulator.com/html/Additional_Information/Reverse_Polish_Notation.htm) serve as one of the most versatile means of interaction.
 

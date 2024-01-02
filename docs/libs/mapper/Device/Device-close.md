@@ -2,9 +2,9 @@
 sidebar_position: 5
 ---
 
-# Device.close()
+# Device:close()
 ```lua
-Device.close()
+Device:close()
 ```
 Close the device.
 

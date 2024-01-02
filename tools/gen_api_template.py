@@ -44,11 +44,11 @@ libs = [
                     ('Device.upstream_ids', 'A table holding unit IDs for each output unit'),
                 ],
                 'methods': [
-                    ('Device.get_events()', 'Return a table holding event IDs for each input unit'),
-                    ('Device.get_upstream_ids()', 'Return a table holding unit IDs for each output unit'),
-                    ('Device.close()', 'Close the device'),
-                    ('Device.send()', 'Send a value to output unit', 'unit_id, value'),
-                    ('Device.sender()', 'Create a native-action to send a value to output unit', 'unit_id[, value]'),
+                    ('Device:get_events()', 'Return a table holding event IDs for each input unit'),
+                    ('Device:get_upstream_ids()', 'Return a table holding unit IDs for each output unit'),
+                    ('Device:close()', 'Close the device'),
+                    ('Device:send()', 'Send a value to output unit', 'unit_id, value'),
+                    ('Device:sender()', 'Create a native-action to send a value to output unit', 'unit_id[, value]'),
                 ],
             },
             {

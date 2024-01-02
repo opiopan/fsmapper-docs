@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'fsmapper User\'s Guide',
   tagline: 'Good relation between various devices and filght simurator',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://opiopan.github.io/',
