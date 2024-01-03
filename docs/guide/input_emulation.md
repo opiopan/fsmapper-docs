@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# Changes to Input Device Characteristics
+# Changing Input Device Characteristics
 
 ## Joystick emulation
 
