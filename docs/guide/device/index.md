@@ -39,7 +39,7 @@ fsmapper comes with the following built-in drivers.
 
 |Type Name|Description|
 |---------|-----------|
-|`dinput`|Game devices supported by DirectInput.<br/>This refers to devices listed in the **USB Game Controllers** on the controll panel, i.e. `joy.cpl`.
+|`dinput`|Game devices supported by DirectInput.<br/>This refers to devices listed in the **USB Game Controllers** found in the control panel, i.e. the devices listed in `joy.cpl`.
 |`simhid`|Input/output devices that support the [**SimHID protocol**](https://github.com/opiopan/simhid-g1000#simhid-protocol).<br/> The [**SimHID protocol**](https://github.com/opiopan/simhid-g1000#simhid-protocol) is adopted by controllers like [**SimHID G1000**](https://github.com/opiopan/simhid-g1000) that I've DIY'd.
 
 
@@ -49,20 +49,18 @@ The `identifier` parameter specifies information necessary for the driver to ide
 For example, for a `dinput` device, it might specify the product name or GUID, while for a `simhid` device, it might specify the virtual COM port name.<br/>
 The 'options' parameter is used to convey driver-specific optional information.
 
-For detailed specifications on what to specify in the `identifier` and `options` parameters for built-in drivers, please refer to the [**dinput device specification**](dinput) and the [**simhid device specification**](simhid).
+For detailed specifications on what to specify in the `identifier` and `options` parameters for built-in drivers, please refer to the [**DirectInput Game Device Specification**](dinput) and the [**SimHID Device Specification**](simhid).
 For devices provided by plugin modules, refer to the description of those respective modules.
 
 ## Device Unit
 **Device Unit** refers to the constituent elements of devices with changing states, such as buttons or analog axes on a joystick.
-Each **Device Unit** owns attributes including **Name**, **Direction**, **Value Type**, **Precision**, **Maximum and Minimum Values**.
+Each **Device Unit** owns attributes including **Name**, **Direction**, **Value Type**, **Precision**, **Value Range**.
 
 - **Name**<br/>
     **Name** corresponds to the ID of each **Device Unit**, and the naming convention depends on the device type.
 
 - **Direction**<br/>
-    **Direction** indicates whether it is ***Input*** or ***Output***, signifying whether the state is obtained from the PC or if the state can be altered by the PC. 
-
-- **Device Unit**<br/>
+    **Direction** indicates whether it is ***Input*** or ***Output***, signifying whether the state is obtained from the PC or if the state can be altered by the PC.<br/>
     **Device Unit**s of the ***Input*** type notify changes in state to the fsmapper system as [**Event**s](/guide/event-action-mapping#event).
 
 - **Value Type**<br/>
@@ -71,11 +69,11 @@ Each **Device Unit** owns attributes including **Name**, **Direction**, **Value 
 - **Precision**<br/>
     **Precision** signifies the precision of the **Device Unit**'s state value, represented by either a 32-bit integer or a 64-bit floating-point number.
 
-- **Maximum and Minimum Values**<br/>
-    **Maximum and Minimum Values** indicate the range within which the **Device Unit** can express values.
+- **Values Range**<br/>
+    **Value Range** indicate the range within which the **Device Unit** can express values.
 
 The attributes of **Device Unit**s corresponding to constituent elements of actual devices vary depending on the device type.<br/>
-For devices supported by built-in drivers, refer to the [**dinput device specification**](dinput) and the [**simhid device specification**](simhid).
+For devices supported by built-in drivers, refer to the [**DirectInput Game Device Specification**](dinput) and the [**SimHID Device Specification**](simhid).
 For devices provided by plugin modules, refer to the description of those respective modules.
 
 :::tip
