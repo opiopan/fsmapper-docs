@@ -26,7 +26,7 @@ Although fsmapper offers a multitude of functions, it can be summarized into fol
 
 - **Virtual instrument panel utilizing Touchscreen Monitors**<br/>
   In a multi-monitor environment, you can construct virtual instrument panels on the screen. Particularly when using a touchscreen monitor, intuitive actions like tapping or flicking can be used to manipulate switches and knobs displayed on the screen.
-  By configuring windows that pop out with ```[Right Alt]+[Mouse Click]``` as elements of the virtual instrument panel, constructing modern glass cockpits becomes seamless.<br/>
+  By configuring windows that pop out with **`[Right Alt]` + `[Mouse Click]`** as elements of the virtual instrument panel, constructing modern glass cockpits becomes seamless.<br/>
   fsmapper excels in handling FS2020's pop-out windows, allowing natural integration of these as part of the instrument panel by hiding title bars and window frames. It also offers workarounds for touch operation glitches inherent in FS2020's implementation.
 
 If you watch the following video, you'll get a better understanding of what can be achieved with fsmapper as described above.
@@ -59,7 +59,7 @@ Initially, in FS2020, when multiple instruments were popped out, they would defa
 Even when manipulated to display in separate windows, each window had same identical attributes such as window titles, making it impossible for the program to mechanically discern which window corresponded to which instrument.<br/>
 On the other hand, fsmapper dynamically controls the visibility, size, position, and other aspects of these windows to treat them as components of a virtual instrument panel. When multiple instruments, such as the G1000's PFD and MFD, are popped out, fsmapper needs to identify which window corresponds to each instrument. Therefore, an interface was created where users can click on each window to select and match them with the respective PFD or MFD.
 
-In 2023, FS2020 was improved to pop out individual windows with a unique window title with each `[Right Ctrl]` + `[Mouse Click]`. In response to this update, a feature was added to fsmapper to automatically capture these windows without requiring users to explicitly select them.
+In 2023, FS2020 was improved to pop out individual windows with a unique window title with each **`[Right Alt]` + `[Mouse Click]`**. In response to this update, a feature was added to fsmapper to automatically capture these windows without requiring users to explicitly select them.
 
 :::
 
