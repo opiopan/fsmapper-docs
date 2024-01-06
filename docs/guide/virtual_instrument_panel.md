@@ -158,8 +158,7 @@ local view_id = viewport3:register_view{
         {object=canvas, x=0, y=0, width=100, height=50},
         {object=captured_window, x=0, y=50, width=100, height=50},
     },
-    mappings = {{event=tapped, action = fs2020.rpn_executer('(>K:XPNDR_IDENT_ON)')}
-    }
+    mappings = {{event=tapped, action = fs2020.rpn_executer('(>K:XPNDR_IDENT_ON)')}}
 }
 ```
 
@@ -172,18 +171,181 @@ viewport.current_view = view_ids[2]
 ```
 
 ## Coordinate System
+In this section, there is an explanation provided regarding the knowledge of coordinate systems that users need to be mindful of when constructing a virtual instrument panel.
 
-### Relative Coordinates VS. Absolute Coordinates
+The positions and lengths specified during the definitions and operations of [**Viewport**](#viewport), [**View**](#view), and [**Canvas**](/libs/mapper/Canvas) follow distinct coordinate systems.
+The significance and the impacted aspects of these three coordinate systems will be highlighted.
+
+- **Display Space Coordinate System:**<br/>
+    The coordinate system of the display space where viewports are located can use a different coordinate system than the Windows system, defined during [**Viewport**](#viewport) definition.
+    This system affects the position and size of the viewport specified during its definition in [`mapper.viewport()`](/libs/mapper/mapper_viewport), impacting how the parameters `x`, `y`, `width`, and `height` are interpreted.
+
+- **View Space Coordinate System:**<br/>
+    The coordinate system of the view space is determined during [**View**](#view) definition and affects the positions and sizes of each view element within the view. 
+    The interpretation of parameters `x`, `y`, `width`, and `height` of each element in the array specified in [`Viewport:register_view()`](/libs/mapper/Viewport/viewport-register_view) is interpreted by this coordinate system.
+
+- **Canvas Space Coordinate System:**<br/>
+    The coordinate system of th canvas is determined during [**Canvas**](/libs/mapper/canvas) object [creation](#view-element) and affects general drawing operations on the canvas. The meaning of parameters specifying the position and length in each [rendering context's methods](/libs/graphics/RenderingContext#methods) passed as arguments to the [renderer](/libs/mapper/RENDER) is determined by this coordinate system.
+
+The specifics of how these coordinate systems are determined will be explained further in subsequent sections.
+
+### Origin and Direction of each Axis
+Each coordinate system considers the top-left corner of the space as the origin point. 
+The x-axis extends from left to right, while the y-axis extends from top to bottom within each respective space.
+
+### Relative Coordinates vs. Absolute Coordinates
+Each spatial coordinate system can be either a **relative** or **absolute** coordinate system.
+In fsmapper, these terms differ from their common mathematical and computer science definitions.
+
+The **relative coordinate system** expresses coordinates as normalized values within a space with a width and height set to 1.
+For instance, `(0.5, 0.5)` denotes the center of the space. Normalizing the width and height to 1 doesn't necessarily equate to equal lengths along the x and y axes.
+In other words, it means that on the display, the lengths of the vectors `(0.1, 0)` and `(0, 0.1)` might not be equal.
+
+The **absolute coordinate system** defines coordinates based on a unit length in both the x and y axes.
+In this case, the lengths of the vectors `(1, 0)` and `(0, 1)` on the display are always the same.
+Users can freely define this unit length for coordinate systems outside of the display space. 
+When an absolute coordinate system is chosen for the display space, pixels become the unit length.
+
+The determination of the coordinate system type for each space is outlined below.
+
+- **Display Space Coordinate System:**<br/>
+    By default, the coordinate system chosen during viewport definition is the relative coordinate system.
+    Only when specifying `'absolute'` in the `coordinate` parameter of [`mapper.viewport()`](/libs/mapper/mapper_viewport) does it become an absolute coordinate system.
+    As mentioned earlier, selecting the absolute coordinate system means that the values specified for `x`, `y`, `width`, and `height` parameters are in pixel units.
+
+- **View Space Coordinate System:**<br/>
+    By default, it inherits the coordinate system type specified during viewport definition.
+    If the viewport definition is in absolute coordinates, it becomes a pixel-based coordinate system with the top-left corner of the view as the origin.
+    By specifying the `logical_width` and `logical_height` parameters in [`Viewport:register_view()`](/libs/mapper/Viewport/Viewport-register_view), one can choose the absolute coordinate system while changing the unit length from pixels to other units.<br/>
+    When specifying a background image for the view using the `background` parameter, aligning `logical_width` and `logical_height` with the image size enables specifying the position and size of view elements in the image's pixel coordinate system, which can be quite convenient.
+
+- **Canvas Space Coordinate System:**<br/>
+    By default, it inherits the coordinate system type specified during view definition.
+    If the view definition is in absolute coordinates, it becomes a coordinate system with the same unit length as defined during the view, with the top-left corner of the view as the origin.
+    By specifying the `logical_width` and `logical_height` parameters in [`mapper.view_elements.canvas()`](/libs/mapper/mapper_view_elements_canvas), one can choose the absolute coordinate system while altering the unit length to a custom value.
 
 ### Allignment
+As previously mentioned, both **View** and **Canvas** can alter the scaling factor or unit length of the coordinate system by specifying `logical_width` and `logical_height`. 
+This ability to specify width and height separately implies that the aspect ratio of the object may differ from the aspect ratio defined by the parent object during its definition.
+
+For instance, when defining a viewport to occupy the entire 16:9 display but intending to display a view designed with a 4:3 aspect ratio for a virtual instrument panel, situations like these emerge.
+
+When specifying different aspect ratios with `logical_width` and `logical_height`, the positioning of the object can be defined using the following parameters at the time of parent object definition.
+
+|Key|Type|Description|
+|---|----|-----------|
+|`horizontal_alignment`|string|Sets the horizontal alignment rule, specifying either `'center'`, `'right'`, or `'left'`.<br/>The default is `'center'`.
+|`vertical_alignment`|string|Sets the vertical alignment rule, specifying either `'center'`, `'top'`, or `'bottom'`.<br/>The default is `'center'`.
+
+For scenarios like dividing the display into multiple viewports, as demonstrated in the [**Components for Virtual Instrument Panel**](#components-for-virtual-instrument-panel) example, setting alignment in this way ensures a natural display even if the display's aspect ratio changes.
+
+```lua {6,14}
+viweport_l = mapper.viewport{
+    name = 'Left Viewport',
+    displayno = 2,
+    x = 0, y = 0,
+    width = 0.5, height = 1,
+    horizontal_alignment = 'right',
+}
+
+viweport_r= mapper.viewport{
+    name = 'Right Viewport',
+    displayno = 2,
+    x = 0.5, y = 0,
+    width = 0.5, height = 1,
+    horizontal_alignment = 'left',
+}
+```
 
 ## Z-order
+The z-order of objects related to the display content of a view is presented here. It indicates the sequence in which objects are displayed when they overlap, determining which object is brought to the foreground.
+
+Objects related to the view's display consist of three types: [`Canvas`](/libs/mapper/Canvas) view elements, [`CapturedWindow`](/libs/mapper/CapturedWindow) view elements, and the [background image of the view](#view).
+These three types of objects have a defined order, and they are rendered from the foreground in the following sequence.
+
+1. Canvas view elements
+2. Background image of the view
+3. CapturedWindow view elements
+
+The ordering of same types of view elements reflects the sequence specified in the `elements` parameter during [view definition](#view).
+The element positioned at the beginning of the array appears in the forefront of the view.
+
+:::warning Note
+Please note that the CapturedWindow view element appears behind the view's background image. Adjust the alpha value to a lower setting for the area corresponding to the placement of the CapturedWindow within the view's background image to ensure transparency for the underlying CapturedWindow. <br/>
+Especially for CapturedWindows targeting pop-out instrument windows in FS2020 with touch panel functionality such as Garmin G3X, an alpha value of 0 is necessary. As per Windows specifications, if a Layered Window has an alpha value other than 0 in the foreground, it won't receive touch or mouse-related messages.
+:::
 
 ## Render on the View
+Rendering methods for the view come in two forms.
+One involves setting a static image as the background image during [View definition](#view).
+The other method involves defining a [`Canvas`](/libs/mapper/Canvas) view element to dynamically update specific areas.
 
-## Handle Poped out Windows
+As mentioned earlier, each [`Canvas`](/libs/mapper/Canvas) object holds a [`value`](/libs/mapper/Canvas/Canvas_value) property designed to maintain the context of the target for rendering. Updating the Canvas's area on the view is achieved by updating this [`value`](/libs/mapper/Canvas/Canvas_value) property. Upon updating the [`value`](/libs/mapper/Canvas/Canvas_value) property, fsmapper invokes the registered [renderer](/libs/mapper/RENDER) for the Canvas at the appropriate timing.
+
+```lua title="Renderer Definition"
+function render(rendering_context, value)
+```
+
+The [renderer](/libs/mapper/RENDER) receives two arguments: the rendering context adjusted to the Canvas's coordinate system, serving as the output target for the Canvas-associated view, and the `value` property. Typically, the operation of renderer involves invoking rendering context methods based on the `value` to draw on the view.
+
+Below is an example of a renderer that holds the aircraft's heading as the `value` and draws the heading indicator needle.
+
+```lua
+-- Load the bitmap of needle then change the origin to the pivot
+local needle = graphics.bitmap('assets/hi_needle.png')
+needle:set_origin(5, 50)
+
+-- Define a canvas to render the needle
+local needle_canvas = mapper.canvas{
+    local_width = 100, local_height = 100,
+    value = 0,
+    renderer = function (rctx, value)
+        rctx:draw_bitmap{bitmap=needle, x=50, y=50, rotation=value}
+    end
+}
+```
+
+The canvas above gets updated synchronously with the change in the aircraft's heading through the following Event-Action mapping.
+
+```lua
+-- Register an RPN to monitor the heading of the aircraft
+local hdg_change = mapper.register_event('HDG')
+fs2020.add_observed_data{
+    {
+        event = hdg_change,
+        rpn = '360 (A:HEADING INDICATOR, Degrees) -',
+        epsilon = 0.5,
+    }
+}
+
+-- Register Event-Action mappiing to update the canvas
+mapper.add_global_mappings{
+    {event=hdg_change, action=needle_canvas:value_setter()}
+}
+```
+
+:::info Note
+The comprehensive overview of the graphics rendering capabilities offered by fsmapper can be found under the [**Graphics**](/guide/graphics).
+:::
 
 ## Handle Touch Event
+As explained in the [**View Element**](#view-element), to handle touch interactions on the view, you need to place OperableArea view elements within the view to trigger events corresponding to touch actions.
+For each OperableArea object, you can individually set the types of touch actions to recognize.
+This is determined by the parameters you specify in [`mapper.view_elements.operable_area()`](/libs/mapper/mapper_view_elements_operable_area).
+
+Please specify the event ID corresponding to the supported action alongside the parameter for the action you want to support when detected.
+
+|Key|Type|Description|
+|---|----|-----------|
+|event_tap|numeric|Specify the Event ID to be triggered upon detecting a tap action
+|event_flick_up|numeric|Specify the Event ID to be triggered upon detecting an upward flick action
+|event_flick_down|numeric|Specify the Event ID to be triggered upon detecting a downward flick action
+|event_flick_right|numeric|Specify the Event ID to be triggered upon detecting a rightward flick action
+|event_flick_left|numeric|Specify the Event ID to be triggered upon detecting a leftward flick action
+|event_rotate_clockwise|numeric|**CURRENTRY NOT IMPLEMENTED**
+|event_rotate__counter_clockwise|numeric|**CURRENTRY NOT IMPLEMENTED**
+
+## Handle Poped out Windows
 
 ## Hidden Viewport
 
