@@ -346,6 +346,49 @@ Please specify the event ID corresponding to the supported action alongside the 
 |event_rotate__counter_clockwise|numeric|**CURRENTRY NOT IMPLEMENTED**
 
 ## Handle Poped out Windows
+For integrating FS2020's popped-out instrument windows into the virtual instrument window, define a [`CapturedWindow`](/libs/mapper/CapturedWindow) view element corresponding to the area where the popped-out window should be placed.
+If a [**Viewport**](#viewport) containing a [**View**](#view) with [`CapturedWindow`](/libs/mapper/CapturedWindow) placements is present, calling [`mapper.start_viewports()`](/libs/mapper/mapper_start_viewports) won’t immediately display the view. Instead, a list of defined [`CapturedWindow`](/libs/mapper/CapturedWindow) elements will appear on the left side of the dashboard as shown below.
 
-## Hidden Viewport
+![Window Capturing](images/capturing-window.png)
 
+
+This area will display the text specified in the `name` parameter during the [`CapturedWindow`](/libs/mapper/CapturedWindow) definition. It should clearly convey to users the instruments that need to be popped out.
+Use this guide to sequentially pop out the necessary instruments by pressing `Right-Ctrl` + `Mouse Click`.
+
+As explained in the [**View Element**](#view-element) section, if you specify the window title text using the `window_title` parameter, fsmapper will automatically capture it. 
+Windows captured by fsmapper become hidden from the screen, and the `name` texts at the top three of the list in the above image turn blue.
+When all the windows targeted by CapturedWindows are captured, the views registered in the viewports will be displayed.
+
+When the `window_title` parameter is not specified during the definition of a [`CapturedWindow`](/libs/mapper/CapturedWindow) or if the specified text is not correct, resulting in the automatic capture of the window not happening, you need to explicitly indicate the window corresponding to the [`CapturedWindow`](/libs/mapper/CapturedWindow) element.
+
+The [`CapturedWindow`](/libs/mapper/CapturedWindow) elements listed on the dashboard are buttons. Clicking on a button transitions to a mode to select a window. Use the mouse to click on the corresponding instrument window. When the instrument window is captured, the appearance of the button will also change.
+
+In the case of manually capturing a window, remember to click the `Activate Viewports` button last.
+This action enables the defined viewports and displays the views registered to the viewports.
+
+### Avoiding touch problems popped out window
+It is well known that the popped out window of an instrument with touch operable capability, such as Garmin G3X, doesn't work well with touch operation, even though it works with mouse operation. <br/>
+fsmapper provides a workaround solution for this problem. 
+You will be able to operate popped out windows with touch operation if those windows are managed as CapturedWindow view elements.
+
+:::info Note
+I don't know the true reason why touch operations are ignored by FS2020. However I assume that this problem is caused by the mechanism to recognize the mouse status change.
+
+I assume that FS2020 polls the current mouse status periodically by using DirectInput API instead of handling the windows message stream such as `WM_LBUTTON_DOWN`. This method may drop some status change events when multiple events occur in a time shorter than the polling interval.<br/>
+Mouse messages generated as a result of tapping are exactly this situation.
+To avoid noise such as palm contacts, Windows delays touch related messages when first contact is recognized. As a result, `WM_LBUTTON_DOWN` and `WM_LBUTTON_UP` messages will occur at the almost same time when you tap a display. In this case, FS2020 cannot recognize mouse button state changes.
+
+Based on this hypothesis, fsmapper removes mouse events generated as a result of a touch operation from the mouse event queue. on the other hand, fsmapper generates mouse events with appropriate intervals.
+
+If you want to stop this behavior, specify the value as false for `avoid_touch_problems` parameter of [`mapper.view_elements.captured_window()`](/libs/mapper/mapper_view_elements_captured_window).
+:::
+
+## Hiding Viewport
+Each [**Viewport**](#viewport) holds a system defined view called [`empty_view`](/libs/mapper/Viewport/viewport_empty_view). 
+This special view doesn’t contain any view elements or background images, in other words, it’s transparent and doesn’t interfere with interactions on the underlying windows.
+
+To hide a viewport, set [`empty_view`](/libs/mapper/Viewport/viewport_empty_view) as the current view.
+
+```lua
+my_viewport:change_view(my_viewport.empty_view)
+```
