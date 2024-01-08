@@ -296,3 +296,32 @@ In [this Lua module](https://github.com/opiopan/fsmapper/blob/v0.9.1/samples/pra
 ### Drawing Text with Font
 To render text, start by setting the font within the rendering context.
 Afterwards, utilize [`RenderingContext:draw_string()`](/libs/graphics/RenderingContext/RenderingContext-draw_string) to output strings, or [`RenderingContext:draw_number()`](/libs/graphics/RenderingContext/RenderingContext-draw_number) to define formatting parameters, such as precision for decimal values, when rendering numeric data.
+
+```lua
+-- Create a fixed-width font from the pre-rendered bitmap
+local font_width = 24
+local bitmap = graphics.bitmap('assets/fixed-width-font')
+local codes='0123456789.-+*/_!abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+local font = graphics.bitmap_font()
+for ix = 1, string.len(codes) do
+    local glyph = bitmap:create_partial_bitmap((ix - 1 * font_width), 0, font_width, bitmap.height)
+    font:add_glyph(string.sub(codes, ix, ix), glyph)
+end
+
+-- Define the Canvas rendere that draws the static text
+local renderer = function (rctx, value)
+    rctx.font = font
+
+    -- Draw a string
+    rctx:draw_string('Hello!', 0, 0)
+
+    -- Draw a numeric value, this formats as the string '003.14'
+    rctx:draw_number{
+        value = 3.1415926,
+        x = 0, y = 30,
+        precision = 5,
+        fraction_precision = 2,
+        leading_zero = true
+    }
+end
+```
