@@ -4,6 +4,14 @@ sidebar_position: 1
 
 # Introduction
 
+:::warning Note
+The documentation is still incomplete. The [**Library Reference**](/libs) section, describing the specifications of each function for Lua scripts, contains only template-like content and lacks detailed descriptions.<br/>
+However, I believe that by releasing just the [**Tutorial**](/getting-started/tutorial) and [**Configuration Guide**](/category/configuration-guide), it will be sufficient for users to utilize fsmapper.
+
+Despite releasing the initial version of fsmapper in 2021, I have procrastinated in creating a thorough documentation for a long time. Finally, during the New Year's holiday of 2024, I have decided to confront the documentation.
+My goal is to have the [**Library Reference**](/libs) section completed by the end of January (as of January 8, 2024).
+:::
+
 **fsmapper** is a Windows application designed to connect a variety of input and output devices to flight simulators.
 Originally, the development of fsmapper began to connect my DIY controller device, [**SimHID G1000**](https://github.com/opiopan/simhid-g1000), to FS2020. However, it has now evolved to encompass functionalities that allow the creation of a home cockpit using a wide range of devices.<br/>
 fsmapper targets not only home cockpit builders aiming for an exact replica of a specific aircraft's cockpit,
@@ -34,7 +42,7 @@ If you watch the following video, you'll get a better understanding of what can 
 <div align="center" class="movie">
     <iframe
         width="100%" height="100%"
-        src="https://www.youtube.com/embed/oaI1DVXfHqY" 
+        src="https://www.youtube.com/embed/Ee6uw2BYdgE" 
         title="YouTube video player" frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>

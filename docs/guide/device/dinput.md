@@ -47,7 +47,7 @@ DirectInput game devices consist solely of ***Input*** type [**Device Unit**](/g
 ### Analog Axes
 |Attribute|Description|
 |--------|-----------|
-|Name|DirectInput supports a maximum of eight analog axes, each with the following names:<br/>`x`, `y`, `z`, `rx`, `ry`, `rz`, `slider1`, `slider2`<br/>Which axes are supported depends on the device.
+|Name|DirectInput supports a maximum of eight analog axes, each with the following names:<br/>`'x'`, `'y'`, `'z'`, `'rx'`, `'ry'`, `'rz'`, `'slider1'`, `'slider2'`<br/>Which axes are supported depends on the device.
 |Direction|***Input***
 |Value Type|***Absolute***
 |Precision|32-bit integre
