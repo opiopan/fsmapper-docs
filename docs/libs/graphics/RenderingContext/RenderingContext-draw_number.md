@@ -2,10 +2,10 @@
 sidebar_position: 14
 ---
 
-# RenderingContext:draw_numeric()
+# RenderingContext:draw_number()
 ```lua
-RenderingContext:draw_numeric(param_table)
-RenderingContext:draw_numeric(value[, x, y])
+RenderingContext:draw_number(param_table)
+RenderingContext:draw_number(value[, x, y])
 ```
 Draw a formated string of a numeric value.
 

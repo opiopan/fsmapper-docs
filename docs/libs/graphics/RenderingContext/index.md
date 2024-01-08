@@ -26,5 +26,5 @@ Object representing a rendering context.
 |[```RenderingContext:fill_geometry()```](/libs/graphics/RenderingContext/RenderingContext-fill_geometry)|Fill a geometry|
 |[```RenderingContext:draw_bitmap()```](/libs/graphics/RenderingContext/RenderingContext-draw_bitmap)|Draw a bitmap|
 |[```RenderingContext:draw_string()```](/libs/graphics/RenderingContext/RenderingContext-draw_string)|Draw a string|
-|[```RenderingContext:draw_numeric()```](/libs/graphics/RenderingContext/RenderingContext-draw_numeric)|Draw a formated string of a numeric value|
+|[```RenderingContext:draw_number()```](/libs/graphics/RenderingContext/RenderingContext-draw_number)|Draw a formated string of a numeric value|
 |[```RenderingContext:fill_rectangle()```](/libs/graphics/RenderingContext/RenderingContext-fill_rectangle)|Fill a rectangle|

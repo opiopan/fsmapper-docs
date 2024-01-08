@@ -218,9 +218,9 @@ libs = [
                     ('RenderingContext:set_opacity_mask()', 'Set a bitmap used as opacity mask to the context', 'bitmap'),
                     ('RenderingContext:draw_geometry()', 'Draw a geometry', 'param_table', 'geometry, x, y[, angle[, scale]]'),
                     ('RenderingContext:fill_geometry()', 'Fill a geometry', 'param_table', 'geometry, x, y[, angle[, scale]]'),
-                    ('RenderingContext:draw_bitmap()', 'Draw a bitmap', 'param_table', 'bitmap[, x, y[, angle[, scale]]'),
+                    ('RenderingContext:draw_bitmap()', 'Draw a bitmap', 'param_table', 'bitmap[, x, y[, width, height[, angle[, scale]]]'),
                     ('RenderingContext:draw_string()', 'Draw a string', 'param_table', 'string[, x, y]'),
-                    ('RenderingContext:draw_numeric()', 'Draw a formated string of a numeric value', 'param_table', 'value[, x, y]'),
+                    ('RenderingContext:draw_number()', 'Draw a formated string of a numeric value', 'param_table', 'value[, x, y]'),
                     ('RenderingContext:fill_rectangle()', 'Fill a rectangle', 'x, y, width, height'),
                 ],
             }

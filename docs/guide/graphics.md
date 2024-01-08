@@ -35,7 +35,7 @@ The rendering context provides the following drawing methods.
 |--------|-------|
 |Drawing Geometry|[`draw_geometry()`](/libs/graphics/RenderingContext/RenderingContext-draw_geometry)<br/>[`fill_geometry()`](/libs/graphics/RenderingContext/RenderingContext-fill_geometry)
 |Drawing Bitmap|[`draw_bitmap()`](/libs/graphics/RenderingContext/RenderingContext-draw_bitmap)
-|Drawing Text|[`draw_string())`](/libs/graphics/RenderingContext/RenderingContext-draw_string)<br/>[`draw_numeric()`](/libs/graphics/RenderingContext/RenderingContext-draw_numeric)
+|Drawing Text|[`draw_string())`](/libs/graphics/RenderingContext/RenderingContext-draw_string)<br/>[`draw_number()`](/libs/graphics/RenderingContext/RenderingContext-draw_number)
 |Others|[`fill_rectangle()`](/libs/graphics/RenderingContext/RenderingContext-fill_rectangle)
 
 The drawing operations executed through the rendering context are finalized by calling the [`finish_rendering()`](/libs/graphics/RenderingContext/RenderingContext-finish_rendering) method. 
@@ -168,9 +168,131 @@ Geometry is an object that defines the shape of figures.
 There are [`SimpleGeometry`](/libs/graphics/SimpleGeometry) objects representing system-defined basic shapes and [`Path`](/libs/graphics/Path) objects, which allow defining complex shapes freely by combining segments such as lines and arcs.
 
 ### Simple Geometry
+The [`SimpleGeometry`](/libs/graphics/SimpleGeometry) object is created using one of the following functions.
+
+|Name|Description|
+|-|-|
+|[```graphics.rectangle()```](/libs/graphics/graphics_rectangle)|Create a SimpleGeometry object as a rectangle|
+|[```graphics.rounded_rectangle()```](/libs/graphics/graphics_rounded_rectangle)|Create a SimpleGeometry object as a rounded rectangle|
+|[```graphics.ellipse()```](/libs/graphics/graphics_ellipse)|Create a SimpleGeometry object as a ellipse|
 
 ### Path
+The [`Path`](/libs/graphics/Path) object can describe complex shapes by combining segments such as lines, arcs, and Bezier curves.
+The Path object is created with [`graphics.path()`](/libs/graphics/graphics_path).
+
+```lua
+local path = graphics.path()
+```
+
+The [`Path`](/libs/graphics/Path) object can be composed of multiple **figures**, and you can add one figure to the [`Path`](/libs/graphics/Path) object using [`Path:add_figure()`](/libs/graphics/Path/Path-add_figure).
+A figure refers to a shape that can be represented by a single stroke.
+
+The [`Path:add_figure()`](/libs/graphics/Path/Path-add_figure) specifies the following parameters.
+:::info Note
+The definition of a figure extensively employs two-dimensional vectors.
+A two-dimensional vector is represented by an array table with two elements, such as `{10, 20}`. 
+This structure will be denoted as **VEC2D** in the following context.
+:::
+
+|Key|Type|Description|
+|---|----|-----------|
+|`fill_mode`|string|Specifies the fill mode with one of the following values.<br/><br/>`'none'`: Indicating that it's a figures representing the outline without filling.<br/><br/>`'winding'`: See [this site](https://learn.microsoft.com/en-us/windows/win32/api/d2d1/ne-d2d1-d2d1_fill_mode#remarks) that explains the meaning of this mode in an easy-to-understand manner.<br/><br/>`'alternate'`: See [this site](https://learn.microsoft.com/en-us/windows/win32/api/d2d1/ne-d2d1-d2d1_fill_mode#remarks) that explains the meaning of this mode in an easy-to-understand manner.
+|`from`|VEC2D|The starting point of the figure.
+|`segments`|table|An array table defining segments. Each element of the array refers to the [**Segment Definition**](#segment-definition).
+
+#### Segment Definition
+The definition of segments is done using one of the following tables.
+
+- **Line Segment**<br/>
+    |Key|Type|Description|
+    |---|----|-----------|
+    |`to`|VEC2D|End point of the line. The starting point of the line is the endpoint of the previous segment. If it's the first segment, the `from` of the figure becomes the starting point.
+
+- **Arc Segment**<br/>
+    |Key|Type|Description|
+    |---|----|-----------|
+    |`to`|VEC2D|End point of the arc. The starting point of the arc is the endpoint of the previous segment. If it's the first segment, the `from` of the figure becomes the starting point.
+    |`radius`|numeric|The radius of the arc.
+    |`direction`|string|A value that specifies whether the arc sweep is clockwise or counterclockwise, such as `'clockwise'` or `'counterclockwise'`.
+    |`arc_type`|string|A value that specifies whether the given arc is larger than 180 degrees, such as `'large'` or `'small'`
+
+- **Bezier Curve Segment**<br/>
+    |Key|Type|Description|
+    |---|----|-----------|
+    |`to`|VEC2D|End point of the curve. The starting point of the curve is the endpoint of the previous segment. If it's the first segment, the `from` of the figure becomes the starting point.
+    |`control1`|VEC2D|A VEC2D that represents the first control point for the curve.
+    |`control2`|VEC2D|A VEC2D that represents the second control point for the curve.
+
+:::tip
+[`graphics.path()`](/libs/graphics/graphics_path) accepts arguments in the same format as [`Path:add_figure()`](/libs/graphics/Path/Path-add_figure). This means that the first figure can be simultaneously registered when generating the [`Path`](/libs/graphics/Path) object."
+:::
+
+### Drawing Geometry
+The drawing of geometry, much like a bitmap, allows specification of translation, rotation, and scaling. Similarly, the origin of the geometry itself can be modified using [`SimpleGeometry:set_origin()`](/libs/graphics/SimpleGeometry/SimpleGeometry-set_origin) or [`Path:set_origin()`](/libs/graphics/Path/Path-set_origin).
+
+Where it differs from a bitmap is that geometry has two types of operations, filling ([`RenderingContext:fill_geometry()`](/libs/graphics/RenderingContext/RenderingContext-fill_geometry)) and drawing the outline ([`RenderingContext:draw_geometry()`](/libs/graphics/RenderingContext/RenderingContext-draw_geometry)). Additionally, during rendering, geometry is affected by properties of the rendering context.
+
+The rendering context properties that affect it are as follows:
+
+- [`brush`](/libs/graphics/RenderingContext/RenderingContext_brush)
+- [`stroke_width`](/libs/graphics/RenderingContext/RenderingContext_stroke_width)
+- [`opacity_mask`](/libs/graphics/RenderingContext/RenderingContext_opacity_mask)
+
+The parameters that can be specified for [`RenderingContext:fill_geometry()`](/libs/graphics/RenderingContext/RenderingContext-fill_geometry) and [`RenderingContext:draw_geometry()`](/libs/graphics/RenderingContext/RenderingContext-draw_geometry) are as follows.
+
+|Key|Type|Description|
+|---|----|-----------|
+|`geometry`|[`Geometry`](#geometry)|**REQUIRED PARAMETER**<br/>The geometry object for drawing. It specifies [`SimpleGeometry`](/libs/graphics/SimpleGeometry) of [`Path`](/libs/graphics/Path).
+|`x`|numeric|Draw the gemometry's origin to coincide with this parameter's position in the target space.<br/>The default is `0`.
+|`y`|numeric|Draw the geometry's origin to coincide with this parameter's position in the target space.<br/>The default is `0`.
+|`angle`|numeric|Rotate counterclockwise by the specified angle in degrees around the geometry's origin.The default is `0`.
+|`scale`|numeric|The scaling factor. The default is `1`.
+
+The following is the code example for the canvas that draws the heading indicator needle with the geometry version under the [**Render on the View**](/guide/virtual_instrument_panel#render-on-the-view) heading.
+
+```lua
+-- Define a path to depict a needle
+local needle = graphics.path{
+    fill_mode = 'winding',
+    from = {0, 50},
+    segments = {
+        {to = {5, 0}},
+        {to = {-5, 0}, radius = 5, direction = 'clockwise', arc_type = 'small'},
+        {to = {0, 50}},
+    }
+}
+
+-- Define a canvas to render the needle
+local needle_canvas = mapper.canvas{
+    local_width = 100, local_height = 100,
+    value = 0,
+    renderer = function (rctx, value)
+        rctx.brush = graphics.color('DarkCyan')
+        rctx:fill_geometry{geometry=needle, x=50, y=50, rotation=value}
+        rctx.brush = graphics.color('Black')
+        rctx.stroke_width = 1.5
+        rctx:draw_geometry{geometry=needle, x=50, y=50, rotation=value}
+    end
+}
+```
 
 ## Font
+The **Font** refers to the object targeted by the text-drawing methods of the rendering context.
+Currently, fsmapper implements only the [`BitmapFont`](/libs/graphics/BitmapFont) object, allowing users to provide glyphs as bitmaps on a code point basis.
+
+:::warning Note
+From the start, within fsmapper's internal workings, the handling of fonts was abstracted to accommodate the Windows font system similarly.
+However, integration with the Windows font system is not yet complete.
+I'm planning to roll up my sleeves and get started on this soon. (as of Jan. 2024).
+:::
 
 ### Bitmap Font
+Generate a BitmapFont object using [`graphics.bitmap_font()`](/libs/graphics/graphics_bitmap_font) and register bitmaps representing glyphs for each code point using [`BitmapFont:add_glyph()`](/libs/graphics/BitmapFont/BitmapFont-add_glyph).
+The width and height of each glyph can vary per code point based on the bitmap size. 
+Additionally, adjusting the origin of the registered bitmaps allows tweaking the so-called baseline or accommodating glyphs that overlap with the previous character when rendering text.
+
+In [this Lua module](https://github.com/opiopan/fsmapper/blob/v0.9.1/samples/practical/lib/segdisp.lua) used in [this sample script](/samples/c172), we parametrically generate a font for a 7-segment display. Please refer to it as an example of BitmapFont usage.
+
+### Drawing Text with Font
+To render text, start by setting the font within the rendering context.
+Afterwards, utilize [`RenderingContext:draw_string()`](/libs/graphics/RenderingContext/RenderingContext-draw_string) to output strings, or [`RenderingContext:draw_number()`](/libs/graphics/RenderingContext/RenderingContext-draw_number) to define formatting parameters, such as precision for decimal values, when rendering numeric data.
