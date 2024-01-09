@@ -6,13 +6,14 @@ sidebar_position: 4
 ```lua
 mapper.print(message)
 ```
-Print a message.
+This function prints a message to the message console.
 
 
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|message|||
+|`message`|string||Specify the string to output
 
 
 ## Return Values
+This function doesn't return any value.

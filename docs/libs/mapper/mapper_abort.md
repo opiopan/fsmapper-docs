@@ -6,7 +6,7 @@ sidebar_position: 5
 ```lua
 mapper.abort()
 ```
-Abort processing.
-
+This function aborts processing of the fsmapper event loop.
 
 ## Return Values
+This function doesn't return any value.

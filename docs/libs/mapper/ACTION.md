@@ -12,8 +12,8 @@ Imprementation of an action by user.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|event_id|||
-|value|||
+|`event_id`|||
+|`value`|||
 
 
 ## Return Values

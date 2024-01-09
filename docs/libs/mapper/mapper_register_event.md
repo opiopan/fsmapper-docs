@@ -6,13 +6,13 @@ sidebar_position: 7
 ```lua
 mapper.register_event(name)
 ```
-Register an event.
-
+This function registers an event.
 
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|name|||
+|`name`|string|Specify the name to assign to the event.<br/>The name is used for display in the message console. It doesn't need to be unique among registered events.|
 
 
 ## Return Values
+This function returns a numeric value representing the event ID.

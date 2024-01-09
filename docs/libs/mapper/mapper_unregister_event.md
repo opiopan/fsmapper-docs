@@ -6,13 +6,14 @@ sidebar_position: 8
 ```lua
 mapper.unregister_event(event_id)
 ```
-Unregister an event.
+This function unregisters an event.
 
 
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|event_id|||
+|`event_id`|numeric|Specify the event ID of the event to unregister.|
 
 
 ## Return Values
+This function doesn't return any value.

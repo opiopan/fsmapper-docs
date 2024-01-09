@@ -12,8 +12,8 @@ Imprementation of a renderer for a Canvas view element by user.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|context|||
-|value|||
+|`context`|||
+|`value`|||
 
 
 ## Return Values

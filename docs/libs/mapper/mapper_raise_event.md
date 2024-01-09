@@ -6,14 +6,15 @@ sidebar_position: 10
 ```lua
 mapper.raise_event(event_id, value)
 ```
-Raise an event.
+This function raises a event.
 
 
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|event_id|||
-|value|||
+|`event_id`|numeric|Specify the event ID of the event to raise.|
+|`value`|Any type|Specify the value passed to the action.|
 
 
 ## Return Values
+This function doesn't return any value.

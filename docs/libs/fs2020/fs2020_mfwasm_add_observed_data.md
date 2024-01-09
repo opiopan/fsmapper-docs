@@ -12,7 +12,7 @@ Register MSFS internal data for observing.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|def_array|||
+|`def_array`|||
 
 
 ## Return Values

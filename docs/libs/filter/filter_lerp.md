@@ -12,8 +12,8 @@ Create a native-action to modify the characteristics curve of a device's analog 
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|action|||
-|val_mappings|||
+|`action`|||
+|`val_mappings`|||
 
 
 ## Return Values

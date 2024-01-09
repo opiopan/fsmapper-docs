@@ -12,7 +12,7 @@ Create a geometry object defined as a path.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|figure_def|||
+|`figure_def`|||
 
 
 ## Return Values

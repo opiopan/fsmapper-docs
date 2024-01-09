@@ -13,9 +13,9 @@ Create a bitmap object.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|path|||
-|width|||
-|height|||
+|`path`|||
+|`width`|||
+|`height`|||
 
 
 ## Return Values

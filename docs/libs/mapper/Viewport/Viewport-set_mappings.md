@@ -12,7 +12,7 @@ Set Event-Action mapping definitions for the viewport.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|mapping_defs|||
+|`mapping_defs`|||
 
 
 ## Return Values

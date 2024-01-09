@@ -12,8 +12,8 @@ Create a native-action that delays the execution of action.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|rel_time|||
-|action|||
+|`rel_time`|||
+|`action`|||
 
 
 ## Return Values

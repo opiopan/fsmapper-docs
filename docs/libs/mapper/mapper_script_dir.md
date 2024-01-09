@@ -6,7 +6,8 @@ sidebar_position: 2
 ```lua
 mapper.script_dir
 ```
-Folder path where the configuration script is located.
-
+This variable indicates the folder path where the configuration script is located.<br/>
+This variable is not able to update.
 
 ## Type
+string

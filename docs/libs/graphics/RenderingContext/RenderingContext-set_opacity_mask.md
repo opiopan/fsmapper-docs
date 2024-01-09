@@ -12,7 +12,7 @@ Set a bitmap used as opacity mask to the context.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|bitmap|||
+|`bitmap`|||
 
 
 ## Return Values

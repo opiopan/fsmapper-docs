@@ -120,7 +120,7 @@ The parameters that can be specified for [`RenderingContext:draw_bitmap()`](/lib
 |`width`|numeric|Perform horizontal scaling to match the bitmap's width to the specified value in the target space.The default is the bitmap's width.
 |`height`|numeric|Perform vertical scaling to match the bitmap's height to the specified value in the target space.The default is the bitmap's height.
 |`angle`|numeric|Rotate counterclockwise by the specified angle in degrees around the bitmap's origin.The default is `0`.
-|`scale`|numeric|The scaling factor.<br/>`width` and `height` are specified together, the final scaling factor becomes the cumulative value.
+|`scale`|numeric|The scaling factor.<br/>If `width` and `height` are specified together, the final scaling factor becomes the cumulative value.
 
 Here's an example of a [`renderer`](/libs/mapper/RENDER) that displays a bitmap rotated by the canvas's `value` degrees and positioned at (100, 100) on the canvas at half its size.
 
@@ -304,7 +304,7 @@ local bitmap = graphics.bitmap('assets/fixed-width-font')
 local codes='0123456789.-+*/_!abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 local font = graphics.bitmap_font()
 for ix = 1, string.len(codes) do
-    local glyph = bitmap:create_partial_bitmap((ix - 1 * font_width), 0, font_width, bitmap.height)
+    local glyph = bitmap:create_partial_bitmap((ix - 1) * font_width, 0, font_width, bitmap.height)
     font:add_glyph(string.sub(codes, ix, ix), glyph)
 end
 

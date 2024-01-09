@@ -343,7 +343,7 @@ Please specify the event ID corresponding to the supported action alongside the 
 |event_flick_right|numeric|Specify the Event ID to be triggered upon detecting a rightward flick action
 |event_flick_left|numeric|Specify the Event ID to be triggered upon detecting a leftward flick action
 |event_rotate_clockwise|numeric|**CURRENTRY NOT IMPLEMENTED**
-|event_rotate__counter_clockwise|numeric|**CURRENTRY NOT IMPLEMENTED**
+|event_rotate__counterclockwise|numeric|**CURRENTRY NOT IMPLEMENTED**
 
 ## Handle Poped out Windows
 For integrating FS2020's popped-out instrument windows into the virtual instrument window, define a [`CapturedWindow`](/libs/mapper/CapturedWindow) view element corresponding to the area where the popped-out window should be placed.
@@ -366,10 +366,12 @@ The [`CapturedWindow`](/libs/mapper/CapturedWindow) elements listed on the dashb
 In the case of manually capturing a window, remember to click the `Activate Viewports` button last.
 This action enables the defined viewports and displays the views registered to the viewports.
 
-### Avoiding touch problems popped out window
+### Avoiding touch problems of FS2020
 It is well known that the popped out window of an instrument with touch operable capability, such as Garmin G3X, doesn't work well with touch operation, even though it works with mouse operation. <br/>
 fsmapper provides a workaround solution for this problem. 
 You will be able to operate popped out windows with touch operation if those windows are managed as CapturedWindow view elements.
+
+If you want to stop this workaround, specify the value as false for `avoid_touch_problems` parameter of [`mapper.view_elements.captured_window()`](/libs/mapper/mapper_view_elements_captured_window).
 
 :::info Note
 I don't know the true reason why touch operations are ignored by FS2020. However I assume that this problem is caused by the mechanism to recognize the mouse status change.
@@ -379,8 +381,6 @@ Mouse messages generated as a result of tapping are exactly this situation.
 To avoid noise such as palm contacts, Windows delays touch related messages when first contact is recognized. As a result, `WM_LBUTTON_DOWN` and `WM_LBUTTON_UP` messages will occur at the almost same time when you tap a display. In this case, FS2020 cannot recognize mouse button state changes.
 
 Based on this hypothesis, fsmapper removes mouse events generated as a result of a touch operation from the mouse event queue. on the other hand, fsmapper generates mouse events with appropriate intervals.
-
-If you want to stop this behavior, specify the value as false for `avoid_touch_problems` parameter of [`mapper.view_elements.captured_window()`](/libs/mapper/mapper_view_elements_captured_window).
 :::
 
 ## Hiding Viewport

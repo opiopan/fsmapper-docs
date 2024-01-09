@@ -6,7 +6,8 @@ sidebar_position: 1
 ```lua
 mapper.script_path
 ```
-Path of the configuration script.
-
+This variable indicates the path of the configuration script.<br/>
+This variable is not able to be update.
 
 ## Type
+string

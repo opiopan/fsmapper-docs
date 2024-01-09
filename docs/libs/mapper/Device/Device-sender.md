@@ -12,8 +12,8 @@ Create a native-action to send a value to output unit.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|unit_id|||
-|value|||
+|`unit_id`|||
+|`value`|||
 
 
 ## Return Values

@@ -12,8 +12,8 @@ Create a native-action that replicates an event for multiple subsequent actions.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|action|||
-|...|||
+|`action`|||
+|`...`|||
 
 
 ## Return Values

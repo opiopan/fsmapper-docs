@@ -12,7 +12,7 @@ Return a vJoyUnit object corresponding to a POV.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|pov_id|||
+|`pov_id`|||
 
 
 ## Return Values

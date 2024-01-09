@@ -334,7 +334,7 @@ def gen_group(group:dict, pos:int, base:Path, suffix:str, prefix):
                                         argdesc = 'This parameter is in associative array table format, meaning it\'s specified by keys rather than parameter positions. '\
                                                   'See the [Parameters Table](#parameters-table) section.'
                                         param_table = True
-                                    f.write(f'|{arg}|{argtype}|{argdesc}|\n')
+                                    f.write(f'|`{arg}`|{argtype}|{argdesc}|\n')
                                 if param_table:
                                     f.write('\n\n## Parameters Table\n|Key|Type|Description|\n|-|-|-|\n| | | |\n')
                             if title[0] in ('functions', 'methods', 'callbacks'):

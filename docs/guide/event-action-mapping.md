@@ -81,8 +81,8 @@ Here are the levels where Event-Action mappings can be registered and how action
 |------|----------|--------|
 |Primary Mappings|4||
 |Secondary Mappings|3||
-|Mappings associated with a [Viewport](/guide/virtual_instrument_panel#viewport)|2|Enabled only when the viewport is displayed|
-|Mappings associated with a [View](/guide/virtual_instrument_panel#view)|1|Enabled only when the viewport is displayed and the view is the current view in the viewport|
+|Mappings associated with a [Viewport](/guide/virtual_instrument_panel#components-for-virtual-instrument-panel)|2|Enabled only when the viewport is displayed|
+|Mappings associated with a [View](/guide/virtual_instrument_panel#components-for-virtual-instrument-panel)|1|Enabled only when the viewport is displayed and the view is the current view in the viewport|
 
 Here are the functions to configure and modify Event-Action mappings.
 
@@ -90,8 +90,8 @@ Here are the functions to configure and modify Event-Action mappings.
 |------|----------|
 |Primary Mappings|[`mapper.set_primary_mappings()`](/libs/mapper/mapper_set_primary_mappings)<br/>[`mapper.add_primary_mappings()`](/libs/mapper/mapper_add_primary_mappings)
 |Secondary Mappings|[`mapper.set_secondary_mappings()`](/libs/mapper/mapper_set_secondary_mappings)<br/>[`mapper.add_secondary_mappings()`](/libs/mapper/mapper_add_secondary_mappings)
-|Mappings associated with a [Viewport](/guide/virtual_instrument_panel#viewport)|[`Viewport:set_mappings()`](/libs/mapper/Viewport/Viewport-set_mappings)<br/>[`Viewport:add_mappings()`](/libs/mapper/Viewport/Viewport-add_mappings)
-|Mappings associated with a [View](/guide/virtual_instrument_panel#view)|[`Viewport:register_view()`](/libs/mapper/Viewport/Viewport-register_view)
+|Mappings associated with a [Viewport](/guide/virtual_instrument_panel#components-for-virtual-instrument-panel)|[`Viewport:set_mappings()`](/libs/mapper/Viewport/Viewport-set_mappings)<br/>[`Viewport:add_mappings()`](/libs/mapper/Viewport/Viewport-add_mappings)
+|Mappings associated with a [View](/guide/virtual_instrument_panel#components-for-virtual-instrument-panel)|[`Viewport:register_view()`](/libs/mapper/Viewport/Viewport-register_view)
 
 :::tip
 Looking at the above functions, you might have wondered, "There's set and add, but no clear?" 
@@ -141,4 +141,4 @@ Below is a list of currently defined system events.
 
 |Key|Description|
 |---|-----------|
-|change_aircraft|An event that occurs when Flight Simulator starts or stops, or when the selected aircraft changes. The **Event Value** is a associative array table where the `host` key holds the running Flight Simulator software and the `aircraft` key contains the selected aircraft.<br/>Currently, fsmapper only supports Microsoft Flight Simurator 2020, so the `host` value is either `'fs2020'` or `nil`.
+|`change_aircraft`|An event that occurs when Flight Simulator starts or stops, or when the selected aircraft changes. The **Event Value** is a associative array table where the `host` key holds the running Flight Simulator software and the `aircraft` key contains the selected aircraft.<br/>Currently, fsmapper only supports Microsoft Flight Simurator 2020, so the `host` value is either `'fs2020'` or `nil`.

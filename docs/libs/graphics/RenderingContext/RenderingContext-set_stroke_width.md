@@ -12,7 +12,7 @@ Set a stroke width to the context.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|width|||
+|`width`|||
 
 
 ## Return Values

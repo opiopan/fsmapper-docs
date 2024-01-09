@@ -12,7 +12,7 @@ Set a brush to the context.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|brush|||
+|`brush`|||
 
 
 ## Return Values

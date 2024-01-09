@@ -12,7 +12,7 @@ Return a vJoyUnit object corresponding to an analog axis.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|axis|||
+|`axis`|||
 
 
 ## Return Values

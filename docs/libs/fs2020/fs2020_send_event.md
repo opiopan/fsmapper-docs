@@ -12,12 +12,12 @@ Send a SimConnect client event.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|event_name|||
-|param1|||
-|param2|||
-|param3|||
-|param4|||
-|param5|||
+|`event_name`|||
+|`param1`|||
+|`param2`|||
+|`param3`|||
+|`param4`|||
+|`param5`|||
 
 
 ## Return Values

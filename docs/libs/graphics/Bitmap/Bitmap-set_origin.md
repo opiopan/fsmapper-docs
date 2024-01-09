@@ -12,8 +12,8 @@ set new origin of the bitmap.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|x|||
-|y|||
+|`x`|||
+|`y`|||
 
 
 ## Return Values

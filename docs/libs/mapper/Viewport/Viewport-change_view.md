@@ -12,7 +12,7 @@ Change the current view.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|view_id|||
+|`view_id`|||
 
 
 ## Return Values
