@@ -12,7 +12,7 @@ This function returns the name assinged to an event.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|`evet_id`|numeric|Specifiy the event ID of the target event.|
+|`evet_id`|numeric|Event ID|
 
 
 ## Return Values

@@ -11,7 +11,7 @@ This function registers an event.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|`name`|string|Specify the name to assign to the event.<br/>The name is used for display in the message console. It doesn't need to be unique among registered events.|
+|`name`|string|Specifies the name to assign to the event.<br/>The name is used for display in the message console. It doesn't need to be unique among registered events.|
 
 
 ## Return Values

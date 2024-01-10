@@ -12,7 +12,7 @@ This function unregisters an event.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|`event_id`|numeric|Specify the event ID of the event to unregister.|
+|`event_id`|numeric|Event ID of the event|
 
 
 ## Return Values

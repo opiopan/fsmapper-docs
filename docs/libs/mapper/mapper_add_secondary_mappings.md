@@ -12,7 +12,7 @@ This function adds specified Event-Action mappings to the defined secondary mapp
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|`mapping_defs`|table|Specify an array table of [Event-Action mapping definiton](/libs/mapper/mapper_set_primary_mappings#event-action-mapping-definition)
+|`mapping_defs`|table|Event-Action mapping array.<br/>It specifis an array table of [Event-Action mapping definiton](/libs/mapper/mapper_set_primary_mappings#event-action-mapping-definition)
 
 
 ## Return Values

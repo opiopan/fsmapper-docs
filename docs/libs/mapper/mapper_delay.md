@@ -17,8 +17,8 @@ Thus, while the function specified by `func` won’t execute until the specified
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|`rel_time`|number|Specify the time to delay the execution of the function in milliseconds.|
-|`func`|function|Specify the function targeted for delayed execution.|
+|`rel_time`|number|Specifies the time to delay the execution of the function in milliseconds.|
+|`func`|function|Specifies the function targeted for delayed execution.|
 
 
 ## Return Values

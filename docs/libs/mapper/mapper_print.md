@@ -12,7 +12,7 @@ This function prints a message to the message console.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|`message`|string||Specify the string to output
+|`message`|string|Specifies the message text to output
 
 
 ## Return Values

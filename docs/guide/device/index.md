@@ -49,7 +49,7 @@ The `identifier` parameter specifies information necessary for the driver to ide
 For example, for a `dinput` device, it might specify the product name or GUID, while for a `simhid` device, it might specify the virtual COM port name.<br/>
 The 'options' parameter is used to convey driver-specific optional information.
 
-For detailed specifications on what to specify in the `identifier` and `options` parameters for built-in drivers, please refer to the [**DirectInput Game Device Specification**](dinput) and the [**SimHID Device Specification**](simhid).
+For detailed specifications on what to specify in the `identifier` and `options` parameters for built-in drivers, please refer to the [**DirectInput Game Device Specification**](builtin/dinput) and the [**SimHID Device Specification**](builtin/simhid).
 For devices provided by plugin modules, refer to the description of those respective modules.
 
 ## Device Unit
@@ -73,7 +73,7 @@ Each **Device Unit** owns attributes including **Name**, **Direction**, **Value 
     **Value Range** indicate the range within which the **Device Unit** can express values.
 
 The attributes of **Device Unit**s corresponding to constituent elements of actual devices vary depending on the device type.<br/>
-For devices supported by built-in drivers, refer to the [**DirectInput Game Device Specification**](dinput) and the [**SimHID Device Specification**](simhid).
+For devices supported by built-in drivers, refer to the [**DirectInput Game Device Specification**](builtin/dinput) and the [**SimHID Device Specification**](builtin/simhid).
 For devices provided by plugin modules, refer to the description of those respective modules.
 
 :::tip
@@ -101,17 +101,17 @@ You can specify which modifier to use in the `modifiers` parameter of [`mapper.d
 - **`incdec`**<br/>
     This modifier is intended for application to [**Device Unit**](#device-unit)s that operate on relative values.
     It generates an `increment` event when the change is positive and a `decrement` event when it is negative.
-    The [**Event Value**](/guide/event-action-mapping#event) represents the absolute value of the 'Device Unit'.
+    The [**Event Value**](/guide/event-action-mapping#event) represents the absolute value of the [**Device Unit**](#device-unit).
 
 The `modifiers` parameter of [`mapper.device()`](/libs/mapper/mapper_device) specifies the definition of modifiers to apply to each **Event Modifier** using an array, similar to [this code snippet](https://github.com/opiopan/fsmapper/blob/v0.9.1/samples/practical/g1000.lua#L10-L19) in the [sample script](/samples/g1000).<br/>
 Here are explanations for each key-value pair within the table representing the definition of a modifier.
 
 |Key|Type|Description|
 |---|----|-----------|
-|`name`|string|The name of the [**Device Unit**](#device-unit) targeted by the modifier.<br/>When both `name` and `class` specifications are applicable to the [**Device Unit**](#device-unit), the `name` specification takes precedence.
+|`name`|string|Specifies the name of the [**Device Unit**](#device-unit) targeted by the modifier.<br/>If an [**Event Modifier**](/guide/device/#event-modifier) is simultaneously defined for the class associated with the [**Device Unit**](/guide/device#device-unit) specified by this parameter, the [**Event Modifier**](/guide/device/#event-modifier) specified by the `name` takes precedence.
 |`class`|string|Specifies when applying the same modifier to multiple [**Device Unit**](#device-unit)s with similar characteristics.<br/>It specifies one of the following: `binary` for units with binary value ranges, `absolute` for units with absolute value ranges, or `relative` for units with relative value ranges.
-|`modtype`|string|The type of modifier.<br/>`raw`, `button`, or `incdec`
-|`modparam`|table|The operational options of the modifier.<br/>Refer to the [**Event Modifier Specification**](modifier).
+|`modtype`|string|Modifier type.<br/>It specifies eather of `raw`, `button`, or `incdec`
+|`modparam`|table|Options specific to the modifier.<br/>For detailed information, refer to the [**Event Modifier Specification**](modifier).
 
 ## Event IDs Table
 The necessary [**Event ID**](/guide/event-action-mapping#event)s of ***Input*** type [**Device Units**](#device-unit) required to define [**Event-Action mappings**](/guide/event-action-mapping) can be obtained by referencing the table returned by the [`Device:get_events()`](/libs/mapper/Device/Device-get_events) method.

@@ -12,8 +12,8 @@ This function raises a event.
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|`event_id`|numeric|Specify the event ID of the event to raise.|
-|`value`|Any type|Specify the value passed to the action.|
+|`event_id`|numeric|Specifies the event ID of the event to raise.|
+|`value`|Any type|Specifies the value passed to the action.|
 
 
 ## Return Values
