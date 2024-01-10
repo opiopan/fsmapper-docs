@@ -45,3 +45,4 @@ For plugin devices, please refer to the plugin's documentation.
 :::
 
 ## Return Values
+This function returns a [`Device`](/libs/mapper/Device) object corresponding to the specified device.
