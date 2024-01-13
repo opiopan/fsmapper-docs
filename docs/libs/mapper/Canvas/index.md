@@ -6,6 +6,11 @@ id: Canvas_index
 # Canvas object
 Object Representing a drawable area on a view.
 
+## Constructors
+|Constructor|
+|---|
+|
+
 ## Properties
 |Name|Description|
 |-|-|

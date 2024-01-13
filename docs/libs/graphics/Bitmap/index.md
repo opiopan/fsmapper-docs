@@ -6,6 +6,11 @@ id: Bitmap_index
 # Bitmap object
 Object representing a bitmap.
 
+## Constructors
+|Constructor|
+|---|
+|
+
 ## Properties
 |Name|Description|
 |-|-|

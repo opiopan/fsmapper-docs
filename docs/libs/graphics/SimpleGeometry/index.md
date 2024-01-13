@@ -6,6 +6,11 @@ id: SimpleGeometry_index
 # SimpleGeometry object
 Object representing a predefined simple geometry.
 
+## Constructors
+|Constructor|
+|---|
+|
+
 ## Methods
 |Name|Description|
 |-|-|

@@ -6,6 +6,11 @@ id: Keystroke_index
 # Keystroke object
 Object Representing a keystroke sequense to emulate keyboard.
 
+## Constructors
+|Constructor|
+|---|
+|
+
 ## Properties
 |Name|Description|
 |-|-|

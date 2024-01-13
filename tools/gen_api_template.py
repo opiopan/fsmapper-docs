@@ -287,6 +287,8 @@ def gen_group(group:dict, pos:int, base:Path, suffix:str, prefix):
                 f'# {title}\n'\
                 f'{description}.\n'
             f.write(data)
+            if suffix == 'object':
+                f.write('\n## Constructors\n|Constructor|\n|---|\n|\n')
             for title in titles:
                 if title[0] in group:
                     f.write(f'\n## {title[1]}\n|Name|Description|\n|-|-|\n')

@@ -6,6 +6,11 @@ id: BitmapFont_index
 # BitmapFont object
 Object representing a bitmap based font.
 
+## Constructors
+|Constructor|
+|---|
+|
+
 ## Methods
 |Name|Description|
 |-|-|

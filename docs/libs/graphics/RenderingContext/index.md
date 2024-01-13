@@ -6,6 +6,11 @@ id: RenderingContext_index
 # RenderingContext object
 Object representing a rendering context.
 
+## Constructors
+|Constructor|
+|---|
+|
+
 ## Properties
 |Name|Description|
 |-|-|

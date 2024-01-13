@@ -6,6 +6,11 @@ id: Device_index
 # Device object
 Object representing a device.
 
+## Constructors
+|Constructor|
+|---|
+|
+
 ## Properties
 |Name|Description|
 |-|-|

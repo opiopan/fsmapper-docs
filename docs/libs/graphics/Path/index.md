@@ -6,6 +6,11 @@ id: Path_index
 # Path object
 Object representing a geometry defined as a path.
 
+## Constructors
+|Constructor|
+|---|
+|
+
 ## Methods
 |Name|Description|
 |-|-|
