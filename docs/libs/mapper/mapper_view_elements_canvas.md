@@ -6,7 +6,7 @@ sidebar_position: 18
 ```lua
 mapper.view_elements.canvas(param_table)
 ```
-Create a Canvas view element object.
+This function creates a [`Canvas`](/libs/mapper/Canvas) view element object.
 
 
 ## Prameters
@@ -18,7 +18,10 @@ Create a Canvas view element object.
 ## Parameters Table
 |Key|Type|Description|
 |-|-|-|
-| | | |
+|renderer|function|Specifies the [renderer](/libs/mapper/RENDER) function for the [`Canvas`](/libs/mapper/Canvas) object to be created.<br/>This parameter is required.
+|value|Any type|Specifies the initial value of the value property for the [`Canvas`](/libs/mapper/Canvas) object to be created.<br/>The default is `nil`.
+|translucency|bool|This parameter indicates whether the [`Canvas`](/libs/mapper/Canvas) object has transparent or translucent areas. When multiple [`Canvas`](/libs/mapper/Canvas) objects overlap, if this parameter is set to `false`, it avoids redrawing the [`Canvas`](/libs/mapper/Canvas) objects in the background, reducing processing costs. If set to true, it redraws overlapping [`Canvas`](/libs/mapper/Canvas) objects from the back, ensuring correct rendering of translucent results.<br/>The default is `false`.
 
 
 ## Return Values
+This function returns a [`Canvas`](/libs/mapper/Canvas) object.
