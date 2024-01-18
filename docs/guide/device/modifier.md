@@ -65,7 +65,7 @@ This modifier is intended for application to [**Device Unit**](/guide/device#dev
 |Event|Description|
 |-----|-----------|
 |`increment`|This event is triggerd when change is positive. The [**Event Value**](/guide/event-action-mapping#event) represents the absolute value of the [**Device Unit**](/guide/device#device-unit).
-|`decrement`|This event is triggerd when change is positive. The [**Event Value**](/guide/event-action-mapping#event) represents the absolute value of the [**Device Unit**](/guide/device#device-unit).
+|`decrement`|This event is triggerd when change is negative. The [**Event Value**](/guide/event-action-mapping#event) represents the absolute value of the [**Device Unit**](/guide/device#device-unit).
 
 ### Options (modparam)
 |Key|Type|Description|

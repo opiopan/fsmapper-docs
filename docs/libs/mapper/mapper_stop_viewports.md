@@ -6,7 +6,8 @@ sidebar_position: 21
 ```lua
 mapper.stop_viewports()
 ```
-Stop all viewports.
+This function deactivates all viewports. This makes all viewports hidden.
 
 
 ## Return Values
+This function doesn't return any value.

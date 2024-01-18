@@ -20,7 +20,7 @@ This function creates a [`Canvas`](/libs/mapper/Canvas) view element object.
 |-|-|-|
 |renderer|function|Specifies the [renderer](/libs/mapper/RENDER) function for the [`Canvas`](/libs/mapper/Canvas) object to be created.<br/>This parameter is required.
 |value|Any type|Specifies the initial value of the value property for the [`Canvas`](/libs/mapper/Canvas) object to be created.<br/>The default is `nil`.
-|translucency|bool|This parameter indicates whether the [`Canvas`](/libs/mapper/Canvas) object has transparent or translucent areas. When multiple [`Canvas`](/libs/mapper/Canvas) objects overlap, if this parameter is set to `false`, it avoids redrawing the [`Canvas`](/libs/mapper/Canvas) objects in the background, reducing processing costs. If set to true, it redraws overlapping [`Canvas`](/libs/mapper/Canvas) objects from the back, ensuring correct rendering of translucent results.<br/>The default is `false`.
+|translucency|boolean|This parameter indicates whether the [`Canvas`](/libs/mapper/Canvas) object has transparent or translucent areas. When multiple [`Canvas`](/libs/mapper/Canvas) objects overlap, if this parameter is set to `false`, it avoids redrawing the [`Canvas`](/libs/mapper/Canvas) objects in the background, reducing processing costs. If set to true, it redraws overlapping [`Canvas`](/libs/mapper/Canvas) objects from the back, ensuring correct rendering of translucent results.<br/>The default is `false`.
 
 
 ## Return Values
