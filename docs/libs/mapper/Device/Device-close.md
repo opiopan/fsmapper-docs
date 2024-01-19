@@ -6,7 +6,8 @@ sidebar_position: 5
 ```lua
 Device:close()
 ```
-Close the device.
+This method close the device.
 
 
 ## Return Values
+This method doesn't return any value.

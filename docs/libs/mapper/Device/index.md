@@ -4,12 +4,12 @@ id: Device_index
 ---
 
 # Device object
-Object representing a device.
+Device object represents a device such as USB gaming device or custom input/output device.
 
 ## Constructors
 |Constructor|
 |---|
-|
+|[`mapper.device()`](/libs/mapper/mapper_device)
 
 ## Properties
 |Name|Description|

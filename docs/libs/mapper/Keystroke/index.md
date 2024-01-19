@@ -4,7 +4,8 @@ id: Keystroke_index
 ---
 
 # Keystroke object
-Object Representing a keystroke sequense to emulate keyboard.
+Object Representing a keystroke sequense to emulate keyboard.<br/>
+The Keystroke object, contrary to its name, does not represent a simple key press or release; instead, it can express a sequence of continuous key inputs.
 
 ## Constructors
 |Constructor|
