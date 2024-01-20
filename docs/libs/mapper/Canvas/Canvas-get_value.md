@@ -6,7 +6,8 @@ sidebar_position: 3
 ```lua
 Canvas:get_value()
 ```
-Set a value for the canvas.
+This function returns the value associated with the canvas.
 
 
 ## Return Values
+This function returns the value associated with the canvas.

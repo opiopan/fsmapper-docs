@@ -6,6 +6,10 @@ id: vJoy_index
 # vJoy object
 Object representing a virtual joystick.
 
+## Constructors
+|Constructor|
+|---|
+
 ## Methods
 |Name|Description|
 |-|-|

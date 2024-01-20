@@ -6,13 +6,13 @@ sidebar_position: 4
 ```lua
 Viewport:change_view(view_id)
 ```
-Change the current view.
+This function changes the current view.
 
 
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|`view_id`|||
-
+|`view_id`|numeric|View ID of the view to be set as the current view.
 
 ## Return Values
+This function doesn't return any value.

@@ -4,12 +4,12 @@ id: Viewport_index
 ---
 
 # Viewport object
-Object representing a viewport.
+Viewport object represents a viewport as a component for the [virtual instrument panel](/guide/virtual_instrument_panel).
 
 ## Constructors
 |Constructor|
 |---|
-|
+|[`mapper.viewport()`](/libs/mapper/mapper_viewport)
 
 ## Properties
 |Name|Description|

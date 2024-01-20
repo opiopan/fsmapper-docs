@@ -6,7 +6,8 @@ sidebar_position: 2
 ```lua
 Viewport.current_view
 ```
-View ID of the current view.
-
+View ID of the current view.<br/>
+By setting a View ID to this property, you can change the current view.
 
 ## Type
+numeric

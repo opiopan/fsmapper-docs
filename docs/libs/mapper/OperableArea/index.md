@@ -4,9 +4,9 @@ id: OperableArea_index
 ---
 
 # OperableArea object
-Object Representing a operable area on a view.
+OperableArea object represents a operable area on a view.
 
 ## Constructors
 |Constructor|
 |---|
-|
+|[`mapper.view_elements.operable_area()`](/libs/mapper/mapper_view_elements_operable_area)
