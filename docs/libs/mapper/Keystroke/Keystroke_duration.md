@@ -6,7 +6,8 @@ sidebar_position: 1
 ```lua
 Keystroke.duration
 ```
-The duration of key press.
+The time in milliseconds to hold the key down before releasing it.
 
 
 ## Type
+numeric

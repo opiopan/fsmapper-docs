@@ -6,13 +6,14 @@ sidebar_position: 1
 ```lua
 vJoy:get_axis(axis)
 ```
-Return a vJoyUnit object corresponding to an analog axis.
+This method is used to get a [`vJoyUnit`](/libs/mapper/vJoyUnit) object corresponding to an analog axis.
 
 
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|`axis`|||
+|`axis`|string|Name of the analog axis.<br/>It specifies one of the following names: `'x'`, `'y'`, `'z'`, `'rx'`, `'ry'`, `'rz'`, `'slider1'`, `'slider2'`.
 
 
 ## Return Values
+This method returns a [`vJoyUnit`](/libs/mapper/vJoyUnit) object.

@@ -4,7 +4,14 @@ id: vJoyUnit_index
 ---
 
 # vJoyUnit object
-Object representing an operable unit of the virtual joystick.
+vJoyUnit object represents an operable unit of the virtual joystick, i.e., an analog axis, a button, or a POV.
+
+## Constructors
+|Constructor|
+|---|
+|[`vJoy:get_axis()`](/libs/mapper/vJoy/vJoy-get_axis)
+|[`vJoy:get_button()`](/libs/mapper/vJoy/vJoy-get_button)
+|[`vJoy:get_pov()`](/libs/mapper/vJoy/vJoy-get_pov)
 
 ## Methods
 |Name|Description|

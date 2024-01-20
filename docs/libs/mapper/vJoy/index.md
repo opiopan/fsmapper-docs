@@ -4,11 +4,12 @@ id: vJoy_index
 ---
 
 # vJoy object
-Object representing a virtual joystick.
+vJoy object represents a virtual joystick.
 
 ## Constructors
 |Constructor|
 |---|
+|[`mapper.virtual_joystick()`](/libs/mapper/mapper_virtual_joystick)
 
 ## Methods
 |Name|Description|

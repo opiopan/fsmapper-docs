@@ -6,7 +6,8 @@ sidebar_position: 2
 ```lua
 Keystroke.interval
 ```
-The interval between keystrokes.
+The time in milliseconds to wait after releasing one key before pressing the next key in the sequence.
 
 
 ## Type
+numeric

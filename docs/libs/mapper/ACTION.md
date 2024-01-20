@@ -6,14 +6,14 @@ sidebar_position: 33
 ```lua
 function ACTION(event_id, value)
 ```
-Imprementation of an action by user.
-
+Action function defined by the user.
 
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|`event_id`|||
-|`value`|||
+|`event_id`|numeric|Event ID
+|`value`|Depend on the event type|Event Value
 
 
 ## Return Values
+fsmapper does not reference the return value of this function.
