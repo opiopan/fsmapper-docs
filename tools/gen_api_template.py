@@ -159,6 +159,29 @@ libs = [
         ],
          'objects': [
             {
+                'name': 'RenderingContext',
+                'description': 'Object representing a rendering context',
+                'properties': [
+                    ('RenderingContext.brush', 'Current brush'),
+                    ('RenderingContext.font', 'Current font'),
+                    ('RenderingContext.stroke_width', 'Current stroke width'),
+                    ('RenderingContext.opacity_mask', 'Bitmap used as opacity mask'),
+                ],
+                'methods': [
+                    ('RenderingContext:finish_rendering()', 'Finalize the drawing process'),
+                    ('RenderingContext:set_brush()', 'Set a brush to the context', 'brush'),
+                    ('RenderingContext:set_font()', 'Set a font to the context', 'font'),
+                    ('RenderingContext:set_stroke_width()', 'Set a stroke width to the context', 'width'),
+                    ('RenderingContext:set_opacity_mask()', 'Set a bitmap used as opacity mask to the context', 'bitmap'),
+                    ('RenderingContext:draw_geometry()', 'Draw a geometry', 'param_table', 'geometry, x, y[, angle[, scale]]'),
+                    ('RenderingContext:fill_geometry()', 'Fill a geometry', 'param_table', 'geometry, x, y[, angle[, scale]]'),
+                    ('RenderingContext:draw_bitmap()', 'Draw a bitmap', 'param_table', 'bitmap[, x, y[, width, height[, angle[, scale]]]'),
+                    ('RenderingContext:draw_string()', 'Draw a string', 'param_table', 'string[, x, y]'),
+                    ('RenderingContext:draw_number()', 'Draw a formated string of a numeric value', 'param_table', 'value[, x, y]'),
+                    ('RenderingContext:fill_rectangle()', 'Fill a rectangle', 'x, y, width, height'),
+                ],
+            },
+            {
                 'name': 'Color',
                 'description': 'Object representing a solid color brush',
             },
@@ -201,29 +224,6 @@ libs = [
                     ('BitmapFont:add_glyph()', 'Add a glyph correnspoinding to a code point', 'param_table', 'code_point, bitmap'),
                 ],
             },
-            {
-                'name': 'RenderingContext',
-                'description': 'Object representing a rendering context',
-                'properties': [
-                    ('RenderingContext.brush', 'Current brush'),
-                    ('RenderingContext.font', 'Current font'),
-                    ('RenderingContext.stroke_width', 'Current stroke width'),
-                    ('RenderingContext.opacity_mask', 'Bitmap used as opacity mask'),
-                ],
-                'methods': [
-                    ('RenderingContext:finish_rendering()', 'Finalize the drawing process'),
-                    ('RenderingContext:set_brush()', 'Set a brush to the context', 'brush'),
-                    ('RenderingContext:set_font()', 'Set a font to the context', 'font'),
-                    ('RenderingContext:set_stroke_width()', 'Set a stroke width to the context', 'width'),
-                    ('RenderingContext:set_opacity_mask()', 'Set a bitmap used as opacity mask to the context', 'bitmap'),
-                    ('RenderingContext:draw_geometry()', 'Draw a geometry', 'param_table', 'geometry, x, y[, angle[, scale]]'),
-                    ('RenderingContext:fill_geometry()', 'Fill a geometry', 'param_table', 'geometry, x, y[, angle[, scale]]'),
-                    ('RenderingContext:draw_bitmap()', 'Draw a bitmap', 'param_table', 'bitmap[, x, y[, width, height[, angle[, scale]]]'),
-                    ('RenderingContext:draw_string()', 'Draw a string', 'param_table', 'string[, x, y]'),
-                    ('RenderingContext:draw_number()', 'Draw a formated string of a numeric value', 'param_table', 'value[, x, y]'),
-                    ('RenderingContext:fill_rectangle()', 'Fill a rectangle', 'x, y, width, height'),
-                ],
-            }
          ],
    }
 ]

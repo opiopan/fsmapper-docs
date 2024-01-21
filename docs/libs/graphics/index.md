@@ -4,7 +4,7 @@ id: graphics_index
 ---
 
 # graphics library
-Graphics library.
+The graphics library of fsmapper provides drawing capabilities to [views](/guide/virtual_instrument_panel#components-for-virtual-instrument-panel) and [offscreen bitmaps](/guide/graphics#bitmap).
 
 ## Functions
 |Name|Description|
@@ -21,9 +21,9 @@ Graphics library.
 ## Objects
 |Name|Description|
 |-|-|
+|[```RenderingContext```](/libs/graphics/RenderingContext)|Object representing a rendering context|
 |[```Color```](/libs/graphics/Color)|Object representing a solid color brush|
 |[```SimpleGeometry```](/libs/graphics/SimpleGeometry)|Object representing a predefined simple geometry|
 |[```Path```](/libs/graphics/Path)|Object representing a geometry defined as a path|
 |[```Bitmap```](/libs/graphics/Bitmap)|Object representing a bitmap|
 |[```BitmapFont```](/libs/graphics/BitmapFont)|Object representing a bitmap based font|
-|[```RenderingContext```](/libs/graphics/RenderingContext)|Object representing a rendering context|
