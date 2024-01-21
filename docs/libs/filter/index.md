@@ -4,7 +4,9 @@ id: filter_index
 ---
 
 # filter library
-Native-actions capable of cascading with other actions.
+The filter library provides native-actions capable of cascading with other actions.<br/>
+The filter library enables processing events, performing conditional branching, and similar operations through cascaded connections of native-actions.
+By combining the native-actions provided by the filter library with other native-actions, complex operations can be efficiently executed as native code without the intervention of the Lua interpreter.
 
 ## Functions
 |Name|Description|

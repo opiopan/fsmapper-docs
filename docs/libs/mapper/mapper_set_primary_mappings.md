@@ -21,7 +21,7 @@ You can reset the primary Event-Action mappings by specifying an empty table, i.
 |Parameter|Type|Description|
 |-|-|-|
 |`event`|numeric|Specifies the event ID of the event targeted for mapping.
-|`action`|function,<br/>[native-action](/guide/event-action-mapping#action)|Spevicies the action targeted for mapping.<br/>A Lua function in [this format](/libs/mapper/ACTION) or [native-action](/guide/event-action-mapping#action) can be specified as a action.
+|`action`|function,<br/>[native-action](/guide/event-action-mapping#action)|Specifies the action targeted for mapping.<br/>A Lua function in [this format](/libs/mapper/ACTION) or [native-action](/guide/event-action-mapping#action) can be specified as a action.
 
 
 ## Return Values
