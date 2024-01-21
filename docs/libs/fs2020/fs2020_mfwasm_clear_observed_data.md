@@ -6,7 +6,8 @@ sidebar_position: 8
 ```lua
 fs2020.mfwasm.clear_observed_data()
 ```
-Clear all observed MSFS internal data.
+This function clears all observed MSFS internal data.
 
 
 ## Return Values
+This function doesn't return any value.

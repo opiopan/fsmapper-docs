@@ -4,7 +4,7 @@ id: fs2020_index
 ---
 
 # fs2020 library
-Interactivity features with Microsoft Flight Simulator.
+The fs2020 library provides interactivity features with Microsoft Flight Simulator.
 
 ## Functions
 |Name|Description|
