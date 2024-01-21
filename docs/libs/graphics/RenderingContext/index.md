@@ -4,12 +4,12 @@ id: RenderingContext_index
 ---
 
 # RenderingContext object
-Object representing a rendering context.
+RenderingContext object is created for each rendering target, it enables graphic rendering to the specified destination through method calls within the rendering context. Additionally, the rendering context retains context-specific elements such as line width and fill colors that affect the rendering process.
 
 ## Constructors
 |Constructor|
 |---|
-|
+|[`graphics.rendering_context()`](/libs/graphics/graphics_rendering_context)
 
 ## Properties
 |Name|Description|

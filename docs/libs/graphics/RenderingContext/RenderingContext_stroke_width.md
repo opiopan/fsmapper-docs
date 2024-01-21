@@ -6,7 +6,7 @@ sidebar_position: 3
 ```lua
 RenderingContext.stroke_width
 ```
-Current stroke width.
-
+This property stores stroke width that can be referenced by the drawing methods.
 
 ## Type
+numeric

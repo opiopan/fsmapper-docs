@@ -6,13 +6,13 @@ sidebar_position: 6
 ```lua
 RenderingContext:set_brush(brush)
 ```
-Set a brush to the context.
-
+This methods sets the object specified in the [`brush`](/libs/graphics/RenderingContext/RenderingContext_brush) property.
 
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|`brush`|||
+|`brush`|[Brush](/guide/graphics#brush)|Specifies the value to set in the [`brush`](/libs/graphics/RenderingContext/RenderingContext_brush) property.
 
 
 ## Return Values
+This funciton doesn't return any value.

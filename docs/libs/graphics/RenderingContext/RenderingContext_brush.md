@@ -6,7 +6,7 @@ sidebar_position: 1
 ```lua
 RenderingContext.brush
 ```
-Current brush.
-
+This property stores a [brush](/guide/graphics#brush) that can be referenced by the drawing methods.
 
 ## Type
+The object can serve as the [brush](/guide/graphics#brush).

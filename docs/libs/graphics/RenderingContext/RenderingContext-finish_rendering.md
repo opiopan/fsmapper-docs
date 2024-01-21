@@ -6,7 +6,8 @@ sidebar_position: 5
 ```lua
 RenderingContext:finish_rendering()
 ```
-Finalize the drawing process.
+This method finalizes the drawing process.
 
 
 ## Return Values
+This method doesn't return any value.

@@ -6,13 +6,14 @@ sidebar_position: 9
 ```lua
 RenderingContext:set_opacity_mask(bitmap)
 ```
-Set a bitmap used as opacity mask to the context.
+This methods sets the object specified in the [`opacity_mask`](/libs/graphics/RenderingContext/RenderingContext_opacity_mask) property.
 
 
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|`bitmap`|||
+|`bitmap`|[`Bitmap`](/libs/graphics/Bitmap)|Specifies the value to set in the [`font`](/libs/graphics/RenderingContext/RenderingContext_opacity_mask) property.
 
 
 ## Return Values
+This funciton doesn't return any value.

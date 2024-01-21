@@ -6,13 +6,13 @@ sidebar_position: 8
 ```lua
 graphics.rendering_context(bitmap)
 ```
-Create a rendering context associated with a bitmap.
-
+This function creates a rendering context target to a bitmap.
 
 ## Prameters
 |Parameter|Type|Description|
 |-|-|-|
-|`bitmap`|||
+|`bitmap`|[`Bitmap`](/libs/graphics/Bitmap)|Bitmap to be used as the output destination for the rendering context.
 
 
 ## Return Values
+This function returns a [`RenderingContext`](/libs/graphics/RenderingContext) object.
