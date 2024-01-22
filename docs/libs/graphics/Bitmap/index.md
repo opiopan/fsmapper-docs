@@ -4,12 +4,12 @@ id: Bitmap_index
 ---
 
 # Bitmap object
-Object representing a bitmap.
+Bitmap object represents a bitmap.
 
 ## Constructors
 |Constructor|
 |---|
-|
+|[`graphics.bitmap()`](/libs/graphics/graphics_bitmap)
 
 ## Properties
 |Name|Description|
@@ -24,5 +24,5 @@ Object representing a bitmap.
 ## Methods
 |Name|Description|
 |-|-|
-|[```Bitmap:set_origin()```](/libs/graphics/Bitmap/Bitmap-set_origin)|set new origin of the bitmap|
-|[```Bitmap:create_partial_bitmap()```](/libs/graphics/Bitmap/Bitmap-create_partial_bitmap)|create a bitmap corresponding to a partial area of the original bitmap|
+|[```Bitmap:set_origin()```](/libs/graphics/Bitmap/Bitmap-set_origin)|Set new origin of the bitmap|
+|[```Bitmap:create_partial_bitmap()```](/libs/graphics/Bitmap/Bitmap-create_partial_bitmap)|Create a bitmap that corresponds to a specific area within the original bitmap

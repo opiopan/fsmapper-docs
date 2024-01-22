@@ -95,7 +95,7 @@ fsmapper can load the following types of bitmap image files.
 
 ### Entire Opacity
 The [`Bitmap`](/libs/graphics/Bitmap) object contains an alpha value indicating the opacity of each pixel. However, you can specify the overall opacity of the entire bitmap using the [`opacity`](/libs/graphics/Bitmap/Bitmap_opacity) property.
-The opacity of each pixel is determined by the product of the pixel's alpha value and the "opacity" property.
+The opacity of each pixel is determined by the product of the pixel's alpha value and the [`opacity`](/libs/graphics/Bitmap/Bitmap_opacity) property.
 
 ### Drawing Bitmap
 The method used to draw a Bitmap is [`RenderingContext:draw_bitmap()`](/libs/graphics/RenderingContext/RenderingContext-draw_bitmap).
@@ -308,7 +308,7 @@ for ix = 1, string.len(codes) do
     font:add_glyph(string.sub(codes, ix, ix), glyph)
 end
 
--- Define the Canvas rendere that draws the static text
+-- Define the Canvas renderer that draws the static text
 local renderer = function (rctx, value)
     rctx.font = font
 

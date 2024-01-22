@@ -14,4 +14,4 @@ This methods sets the object specified in the [`font`](/libs/graphics/RenderingC
 |`font`|[Font](/guide/graphics#font)|Specifies the value to set in the [`font`](/libs/graphics/RenderingContext/RenderingContext_font) property.
 
 ## Return Values
-This funciton doesn't return any value.
+This method doesn't return any value.

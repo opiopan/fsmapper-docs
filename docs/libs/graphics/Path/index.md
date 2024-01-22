@@ -4,12 +4,12 @@ id: Path_index
 ---
 
 # Path object
-Object representing a geometry defined as a path.
+The Path object represents a user-defined geometry that can encompass complex shapes by combining segments, such as lines, arcs, and Bezier curves.
 
 ## Constructors
 |Constructor|
 |---|
-|
+|[`graphics.path()`](/libs/graphics/graphics_path)
 
 ## Methods
 |Name|Description|

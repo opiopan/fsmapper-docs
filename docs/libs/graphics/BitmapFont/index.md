@@ -4,12 +4,12 @@ id: BitmapFont_index
 ---
 
 # BitmapFont object
-Object representing a bitmap based font.
+BitmapFont object represents a bitmap based font.
 
 ## Constructors
 |Constructor|
 |---|
-|
+|[`graphics.bitmap_font()`](/libs/graphics/graphics_bitmap_font)
 
 ## Methods
 |Name|Description|

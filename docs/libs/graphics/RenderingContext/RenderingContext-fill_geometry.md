@@ -7,7 +7,7 @@ sidebar_position: 11
 RenderingContext:fill_geometry(param_table)
 RenderingContext:fill_geometry(geometry, x, y[, angle[, scale]])
 ```
-This function fills the specified geometry using following properties of the rendering context.
+This method fills the specified geometry using following properties of the rendering context.
 - [`brush`](/libs/graphics/RenderingContext/RenderingContext_brush)
 - [`stroke_width`](/libs/graphics/RenderingContext/RenderingContext_stroke_width)
 - [`opacity_mask`](/libs/graphics/RenderingContext/RenderingContext_opacity_mask)
@@ -34,4 +34,4 @@ This function fills the specified geometry using following properties of the ren
 
 
 ## Return Values
-This function doesn't return any value.
+This method doesn't return any value.

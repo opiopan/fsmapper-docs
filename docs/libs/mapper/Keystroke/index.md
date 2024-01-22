@@ -23,3 +23,8 @@ The Keystroke object, contrary to its name, does not represent a simple key pres
 |-|-|
 |[```Keystroke:synthesize()```](/libs/mapper/Keystroke/Keystroke-synthesize)|Synthesize keystroke sequense held by this object|
 |[```Keystroke:synthesizer()```](/libs/mapper/Keystroke/Keystroke-synthesizer)|Create a  native-action to synthesize keystroke sequense hold by this object|
+
+## Operators
+|Operator|Description|
+|-|-|
+|[`+`](/libs/mapper/Keystroke/Metatable_add)|Concatenating operation for keystrokes

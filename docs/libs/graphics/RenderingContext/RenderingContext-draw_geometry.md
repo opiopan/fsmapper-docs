@@ -34,4 +34,4 @@ This function draws the outline of the specified geometry using following proper
 
 
 ## Return Values
-This function doesn't return any value.
+This method doesn't return any value.

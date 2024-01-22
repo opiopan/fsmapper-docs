@@ -16,4 +16,4 @@ This methods sets the object specified in the [`opacity_mask`](/libs/graphics/Re
 
 
 ## Return Values
-This funciton doesn't return any value.
+This method doesn't return any value.

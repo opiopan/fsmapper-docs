@@ -10,3 +10,4 @@ Opacity of the bitmap.
 
 
 ## Type
+numeric

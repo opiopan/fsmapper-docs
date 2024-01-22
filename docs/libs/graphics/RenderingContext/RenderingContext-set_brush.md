@@ -15,4 +15,4 @@ This methods sets the object specified in the [`brush`](/libs/graphics/Rendering
 
 
 ## Return Values
-This funciton doesn't return any value.
+This method doesn't return any value.

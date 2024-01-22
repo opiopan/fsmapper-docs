@@ -7,7 +7,7 @@ sidebar_position: 12
 RenderingContext:draw_bitmap(param_table)
 RenderingContext:draw_bitmap(bitmap[, x, y[, width, height[, angle[, scale]]])
 ```
-This function draws a bitmap.
+This method draws a bitmap.
 
 
 ## Prameters
@@ -36,4 +36,4 @@ This function draws a bitmap.
 
 
 ## Return Values
-This function doesn't return any value.
+This method doesn't return any value.

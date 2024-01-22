@@ -16,4 +16,4 @@ This methods sets the value specified in the [`stroke_width`](/libs/graphics/Ren
 
 
 ## Return Values
-This funciton doesn't return any value.
+This method doesn't return any value.
