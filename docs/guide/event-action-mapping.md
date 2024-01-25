@@ -104,7 +104,7 @@ mapper.set_primary_mappings({})
 :::
 
 ## Filter
-The [**filter library**](http://localhost:3000/fsmapper-docs/libs/filter/) enables processing events, performing conditional branching, and similar operations through cascaded connections of native-actions.
+The [**filter library**](/libs/filter/) enables processing events, performing conditional branching, and similar operations through cascaded connections of native-actions.
 By combining the native-actions provided by the [**filter library**](http://localhost:3000/fsmapper-docs/libs/filter/) with other native-actions, complex operations can be efficiently executed as native code without the intervention of the Lua interpreter.
 
 Below is an example of mapping throttle input from a physical device to a vJoy device. 
