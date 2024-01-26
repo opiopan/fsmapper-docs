@@ -31,7 +31,7 @@ Although fsmapper offers a multitude of functions, it can be summarized into fol
 
 If you watch the following video, you'll get a better understanding of what can be achieved with fsmapper as described above.
 
-<div align="center" class="movie">
+<div align="center" className="movie">
     <iframe
         width="100%" height="100%"
         src="https://www.youtube.com/embed/Ee6uw2BYdgE" 
@@ -63,8 +63,19 @@ In 2023, FS2020 was improved to pop out individual windows with a unique window 
 
 :::
 
-![fsmapper architecture](/img/fsmapper-arch.svg)
+import ThemedImage from '@theme/ThemedImage';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-The diagram above illustrates how fsmapper works. fsmapper patiently waits for events (***<span class="annotation_green">green arrows</span>***) such as operations from various input devices, touchscreen interactions, and changes in the aircraft's status within FS2020. Upon detecting an event, fsmapper executes the corresponding action. These actions are Lua function objects that allow interaction (***<span class="annotation_orange">orange arrows</span>***) with various objects such as aircraft controls within FS2020, graphical representation on the screen, and data output to devices, facilitated through Lua functions and Lua objects provided by fsmapper.
+<p>
+  <ThemedImage
+    alt="fsmapper architecture image"
+    sources={{
+      light: useBaseUrl('/img/fsmapper-arch.svg'),
+      dark: useBaseUrl('/img/fsmapper-arch-dark.svg'),
+    }}
+  />
+</p>
+
+The diagram above illustrates how fsmapper works. fsmapper patiently waits for events (***<span className="annotation_green">green arrows</span>***) such as operations from various input devices, touchscreen interactions, and changes in the aircraft's status within FS2020. Upon detecting an event, fsmapper executes the corresponding action. These actions are Lua function objects that allow interaction (***<span className="annotation_orange">orange arrows</span>***) with various objects such as aircraft controls within FS2020, graphical representation on the screen, and data output to devices, facilitated through Lua functions and Lua objects provided by fsmapper.
 
 The '**Configuration File**' specified by the user during fsmapper execution refers to the definition of the correspondence between these events and actions ([***Event-Action mappings***](/guide/event-action-mapping)) as a Lua script.

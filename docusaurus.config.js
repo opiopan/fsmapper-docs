@@ -62,6 +62,7 @@ const config = {
           alt: 'famapper logo',
           src: 'img/logo.svg',
         },
+        hideOnScroll: true,
         items: [
           {
             href: 'https://github.com/opiopan/fsmapper/releases/latest',
