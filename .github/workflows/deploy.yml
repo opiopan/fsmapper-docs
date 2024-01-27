@@ -27,7 +27,6 @@ jobs:
         run: ./tools/retrieve_release.sh
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          GITHUB_REPOSITORY: opiopan/fsmapper
           OUTPUT_FILE: ./.version.js
 
       - name: Build website
