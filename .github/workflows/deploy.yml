@@ -15,26 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Retrieve release information
-        run: ./tools/retrieve_release.sh
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          OUTPUT_FILE: ./.version.js
-
-      - name: Build website
-        run: npm run build
-
       - uses: actions/upload-pages-artifact@v1
         with:
-          path: build
+          path: redirection
 
   deploy:
     name: Deploy to GitHub Pages
