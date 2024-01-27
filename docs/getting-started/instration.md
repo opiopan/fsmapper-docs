@@ -12,8 +12,15 @@ For instructions on building and installing from the source code, please refer [
 :::
 
 ## Download zip package
-The installation package for fsmapper is available [**here**](https://github.com/opiopan/fsmapper/releases/latest). 
-Download ```fsmapper_x.x.x.zip``` and extract it to your preferred location.
+
+import {Version} from '@site/.version';
+export const LatestPackage = ({children}) => (
+    <a href={Version.package}>{children}</a>
+);
+
+You can download <LatestPackage>the latest version (v{Version.text})</LatestPackage> of the installation package from <LatestPackage>**here**</LatestPackage>.
+If you want to download a previous version, please access it [**here**](https://github.com/opiopan/fsmapper/releases).<br/>
+Once you have downloaded the installation package (zip file), extract it to your preferred folder.
 
 The file structure after extraction will look like the following.
 

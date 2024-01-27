@@ -2,8 +2,10 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+
+  release:
+    types: [released]
 
   workflow_dispatch:
 
@@ -20,6 +22,13 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Retrieve release information
+        run: ./tools/retrieve_release.sh
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          OUTPUT_FILE: ./.version.js
+
       - name: Build website
         run: npm run build
 
